@@ -49,8 +49,8 @@ sudo usermod -aG dialout $USER
 
 2. **Flash the LEFT firmware**
    ```bash
-   # Copy the LEFT firmware file to the keyboard
-   cp ~/Downloads/firmware/nice_view-piantor_pro_bt_left-zmk.uf2 /run/media/$USER/KEEBART/
+   # Mount and copy in one command
+   udisksctl mount -b /dev/disk/by-label/KEEBART && cp ~/Downloads/firmware/nice_view-piantor_pro_bt_left-zmk.uf2 /run/media/$USER/KEEBART/
 
    # The keyboard will automatically reboot after copying
    ```
@@ -64,27 +64,18 @@ sudo usermod -aG dialout $USER
 
 4. **Flash the RIGHT firmware**
    ```bash
-   # Copy the RIGHT firmware file to the keyboard
-   cp ~/Downloads/firmware/nice_view-piantor_pro_bt_right-zmk.uf2 /run/media/$USER/KEEBART/
+   # Mount and copy in one command
+   udisksctl mount -b /dev/disk/by-label/KEEBART && cp ~/Downloads/firmware/nice_view-piantor_pro_bt_right-zmk.uf2 /run/media/$USER/KEEBART/
 
    # The keyboard will automatically reboot after copying
    ```
-
-#### Manual Mounting (if needed)
-If the keyboard doesn't auto-mount:
-```bash
-# Check if device is detected
-lsblk
-
-# Mount it manually
-udisksctl mount -b /dev/sdX1  # Replace X with actual device letter
-```
 
 ### Troubleshooting
 
 - **Device not appearing**: Try a different USB cable or port
 - **Permission denied**: Ensure you're in the `dialout` group and have logged out/in
-- **Auto-mount not working**: Use `udisksctl` command shown above
+- **Mount fails**: Check if device is detected with `lsblk`, or try mounting with `udisksctl mount -b /dev/sdX1` (replace X with actual device letter)
+- **Device already mounted**: If you get "already mounted" error, the command will still work - the cp will proceed
 
 ## Keymap Overview
 

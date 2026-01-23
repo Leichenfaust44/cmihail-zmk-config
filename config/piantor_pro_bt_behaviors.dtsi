@@ -75,15 +75,26 @@ smartnum_tap: smartnum_toggle_hold {
     quick-tap-ms = <225>;
     bindings = <&mo>, <&num_word>;
 };
+numsym_fn_morph: numsym_or_fn {
+    compatible = "zmk,behavior-mod-morph";
+    #binding-cells = <0>;
+    bindings = <&sl 1>, <&fn_layer_noshift>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+};
+numsym_fn_hold_morph: numsym_or_fn_hold {
+    compatible = "zmk,behavior-mod-morph";
+    #binding-cells = <0>;
+    bindings = <&mo 1>, <&mo 3>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+};
 numsym_tap: numsym_sticky_hold {
     compatible = "zmk,behavior-hold-tap";
     #binding-cells = <2>;
     flavor = "balanced";
     tapping-term-ms = <280>;
     quick-tap-ms = <225>;
-    bindings = <&mo>, <&sl>;
+    bindings = <&numsym_fn_hold_morph>, <&numsym_fn_morph>;
 };
-#include "piantor_pro_bt_leader.dtsi"
 // System layer media key home row mods
 hm_media: homerow_mods_media {
     compatible = "zmk,behavior-hold-tap";
@@ -157,85 +168,24 @@ undo_redo: undo_or_redo {
     bindings = <&kp K_UNDO>, <&kp K_AGAIN>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
 };
-leader_macro: leader_key_macro {
-    compatible = "zmk,behavior-macro";
+left_right_click: left_or_right_click {
+    compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
-    bindings = <&macro_tap &leader>;
-};
-leader_exit: leader_with_exit {
-    compatible = "zmk,behavior-macro";
-    #binding-cells = <0>;
-    bindings = <&macro_tap &to 0 &leader>;
+    bindings = <&mkp MB1>, <&mkp MB2>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
 };
 triple_backtick: triple_backtick_macro {
     compatible = "zmk,behavior-macro";
     #binding-cells = <0>;
     bindings = <&macro_tap &kp GRAVE &kp GRAVE &kp GRAVE>;
 };
-
-// Compose key macros for Romanian letters (faster than Unicode)
-// Requires K_APPLICATION configured as compose key in Linux
-unicode_a_breve: unicode_0103 {
+middle_click_exit: middle_click_and_exit {
     compatible = "zmk,behavior-macro";
     #binding-cells = <0>;
-    bindings = <&macro_tap &to 0 &kp K_APP &kp B &kp A>;
+    bindings = <&mkp MB3>, <&to 0>;
 };
-unicode_s_comma: unicode_0219 {
+fn_layer_noshift: fn_layer_release_shift {
     compatible = "zmk,behavior-macro";
     #binding-cells = <0>;
-    bindings = <&macro_tap &to 0 &kp K_APP &kp SEMI &kp S>;
-};
-unicode_t_comma: unicode_021b {
-    compatible = "zmk,behavior-macro";
-    #binding-cells = <0>;
-    bindings = <&macro_tap &to 0 &kp K_APP &kp SEMI &kp T>;
-};
-unicode_a_circ: unicode_00e2 {
-    compatible = "zmk,behavior-macro";
-    #binding-cells = <0>;
-    bindings = <&macro_tap &to 0 &kp K_APP &kp CARET &kp A>;
-};
-unicode_i_circ: unicode_00ee {
-    compatible = "zmk,behavior-macro";
-    #binding-cells = <0>;
-    bindings = <&macro_tap &to 0 &kp K_APP &kp CARET &kp I>;
-};
-
-// Compose key macros for capital Romanian letters
-unicode_A_breve: unicode_0102 {
-    compatible = "zmk,behavior-macro";
-    #binding-cells = <0>;
-    bindings = <&macro_release &kp LSHIFT &kp RSHIFT>
-             , <&macro_tap &to 0 &kp K_APP &kp B>
-             , <&macro_press &kp LSHIFT>
-             , <&macro_tap &kp A>
-             , <&macro_release &kp LSHIFT>;
-};
-unicode_S_comma: unicode_0218 {
-    compatible = "zmk,behavior-macro";
-    #binding-cells = <0>;
-    bindings = <&macro_release &kp LSHIFT &kp RSHIFT>
-             , <&macro_tap &to 0 &kp K_APP &kp SEMI>
-             , <&macro_press &kp LSHIFT>
-             , <&macro_tap &kp S>
-             , <&macro_release &kp LSHIFT>;
-};
-unicode_T_comma: unicode_021a {
-    compatible = "zmk,behavior-macro";
-    #binding-cells = <0>;
-    bindings = <&macro_release &kp LSHIFT &kp RSHIFT>
-             , <&macro_tap &to 0 &kp K_APP &kp SEMI>
-             , <&macro_press &kp LSHIFT>
-             , <&macro_tap &kp T>
-             , <&macro_release &kp LSHIFT>;
-};
-unicode_A_circ: unicode_00c2 {
-    compatible = "zmk,behavior-macro";
-    #binding-cells = <0>;
-    bindings = <&macro_tap &to 0 &kp K_APP &kp CARET &kp LS(A)>;
-};
-unicode_I_circ: unicode_00ce {
-    compatible = "zmk,behavior-macro";
-    #binding-cells = <0>;
-    bindings = <&macro_tap &to 0 &kp K_APP &kp CARET &kp LS(I)>;
+    bindings = <&sl 3>, <&macro_release &kp LSHIFT &kp RSHIFT>;
 };

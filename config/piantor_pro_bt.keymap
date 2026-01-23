@@ -8,15 +8,14 @@
  *
  * Colemak (Layer 0): Default layer with home row mods
  *   - Home row mods: A=Alt, R=Shift, S=Ctrl, T=Super (left); N=Super, E=Ctrl, I=Shift, O=Alt (right)
- *   - Thumbs: ESC | Space/Nav | Magic Shift | NumSym (tap=sticky, hold=momentary) | Backspace | Delete
+ *   - Thumbs: Delete | Backspace | Magic Shift | NumSym (tap=sticky num_sym, shift+tap=sticky fn, hold=momentary num_sym) | Space/Nav | ESC
  *   - Magic Shift (urob): tap after letter=repeat, tap otherwise=sticky shift, double-tap=caps word, hold=shift
  *   - Combos (all 50ms timeout):
  *     - Tab/Return: S+T = Tab, N+E = Return
- *     - Edit: W+R = Copy (Shift+Copy = Cut on layers 0,2,3,4; direct Cut on layer 1)
- *            T+G = Undo (Shift+Undo = Redo on layers 0,2,3,4; direct Redo on layer 1)
- *            D+V = Leader, P+T = Paste
- *     - Mouse: M+N = Left Click, J+L = Right Click, K+H = Middle Click
- *     - Mouse/Scroll: R+X = Mouse Left (Shift = Scroll Left), T+D = Mouse Right (Shift = Scroll Right)
+ *     - Edit: W+R = Copy (Shift+Copy = Cut), T+G = Undo (Shift+Undo = Redo)
+ *            P+T = Paste
+ *     - Mouse: M+N = Left Click (Shift+M+N = Right Click)
+ *     - Mouse/Scroll: R+X = Mouse Left, T+D = Mouse Right, P+B = Scroll Left, J+L = Scroll Right
  *     - Navigation: vertical combos for arrows, page up/down, home/end
  *     - Symbols: vertical combos for #, ^, &
  *
@@ -25,20 +24,20 @@
  *   - Home row: 0654()* /`% with home row mods (0=Alt, 6=Shift, 5=Ctrl, 4=Super, *=Super, /=Ctrl, `=Shift, %=Alt)
  *   - Bottom row: ^321{}=@#$
  *   - Thumbs: & ~ blsh | Smartnum | StickyFn | pipe
- *   - Activated by 4th thumb key: tap for sticky layer (one key), hold for momentary access
+ *   - Activated by 4th thumb key: tap for sticky layer, shift+tap for sticky fn layer, hold for momentary access
  *
  * SmartNum (Layer 2): Number layer (urob's auto-layer)
  *   - Left side: Numbers in unusual layout 987/0654/321 with home row mods
  *   - Right side: NumSym symbols (]+-_>, ) * /`%, }=,.$ )
  *   - Auto-exits when non-number keys are pressed (urob's smartnum feature)
- *   - Thumbs: Exit | Space | Magic Shift | Exit | Bspc | Del
+ *   - Thumbs: Delete | Backspace | Magic Shift | Exit | Space | Exit
  *   - Activated from NumSym layer via 4th thumb key
  *
  * Fn Layer (Layer 3): Function keys and keyboard layer activation
  *   - Left side: F-keys (F10-F7, F11/F6-F4, F12/F3-F1) in reverse order
- *   - Right side: Ctrl+Alt+F shortcuts (C-A-F3, C-A-F2, C-A-F1) and home row mods
- *   - Thumbs: All blocked
- *   - Activated by sticky layer from SmartNum layer
+ *   - Right side: Same as default layer (J/L/U/Y/', M/mods, K/H/,/./) with explicit home row mods
+ *   - Thumbs: Exit | Space | Shift (on left); NumSym | Bspc | Del (on right)
+ *   - Activated by sticky layer from NumSym layer, or shift+tap on default layer NumSym thumb key
  *
  * Nav/Sys (Layer 4): Navigation and system control layer
  *   - Left side: Media controls, BT/RGB controls with home row mods
@@ -60,7 +59,7 @@
 #include "zmk-helpers/helper.h"
 
 &num_word {
-    continue-list = <BSPC DEL DOT COMMA PLUS MINUS ASTRK FSLH EQUAL GRAVE UP DOWN LEFT RIGHT HOME END>;
+    continue-list = <BSPC DEL DOT COMMA PLUS MINUS ASTRK FSLH EQUAL GRAVE UP DOWN LEFT RIGHT HOME END K_UNDO K_AGAIN>;
 };
 
 &sl {
@@ -94,13 +93,13 @@
             // |  Q  |  W  |  F  |  P  |  B  |   |  J  |  L  |  U  |  Y  |  '  |
             // |  A  |  R  |  S  |  T  |  G  |   |  M  |  N  |  E  |  I  |  O  |
             // |  Z  |  X  |  C  |  D  |  V  |   |  K  |  H  |  ,  |  .  |  /  |
-            //     | Esc | Space/Nav | Shift |   | NumSym | Backspace | Delete |
+            //  | Repeat | Space/Nav | Shift |   | NumSym | Backspace | Delete |
             // Home row mods: A=Alt, R=Shift, S=Ctrl, T=Super (left); N=Super, E=Ctrl, I=Shift, O=Alt (right)
             bindings = <
                 &kp Q       &kp W           &kp F           &kp P           &kp B           &kp J  &kp L           &kp U              &kp Y              &kp SQT
                 &hml LALT A &hml LSFT R     &hml LCTRL S    &hml LGUI T     &kp G           &kp M  &hmr RGUI N     &hmr RCTRL E       &hmr RSFT I        &hmr RALT O
                 &kp Z       &kp X           &kp C           &kp D           &kp V           &kp K  &kp H           &comma_morph       &period_morph      &slash_morph
-                                            &kp ESC  &space_nav 4 SPACE  &shift_only_tap LSHIFT 0    &numsym_tap 1 1  &kp BSPC  &kp DEL
+                                            &kp DEL  &kp BSPC  &shift_only_tap LSHIFT 0    &numsym_tap 0 0  &space_nav 4 SPACE  &kp ESC
             >;
         };
 
@@ -111,13 +110,13 @@
             // |  <  |  9  |  8  |  7  |  [  |   |  ]  |  +  |  -  |  _  |  >  |
             // | 0+A | 6+S | 5+C | 4+G |  (  |   |  )  | *+G | /+C | `+S | %+A |
             // |  ^  |  3  |  2  |  1  |  {  |   |  }  |  =  |  @  |  #  |  $  |
-            //            |  &  |  ~  | blsh |   | Smartnum | StickyFn | pipe |
+            //            |  &  |  ~  | blsh |   | Smartnum | Space/Nav | pipe |
             // Home row mods: 0=Alt, 6=Shift, 5=Ctrl, 4=Super (left); *=Super, /=Ctrl, `=Shift, %=Alt (right)
             bindings = <
                 &kp LT          &kp N9          &kp N8          &kp N7          &kp LBKT        &kp RBKT        &kp PLUS        &kp MINUS       &kp UNDER       &kp GT
                 &hml LALT N0    &hml LSFT N6    &hml LCTRL N5   &hml LGUI N4    &kp LPAR        &kp RPAR        &hmr RGUI ASTRK &hmr RCTRL FSLH &hmr RSFT GRAVE &hmr RALT PRCNT
                 &kp CARET       &kp N3          &kp N2          &kp N1          &kp LBRC        &kp RBRC        &kp EQUAL       &kp AT          &kp HASH        &kp DLLR
-                                                &kp AMPS  &kp TILDE  &kp BSLH    &smartnum_tap 2 2  &sl 3  &kp PIPE
+                                                &kp AMPS  &kp TILDE  &kp BSLH    &smartnum_tap 2 2  &trans  &kp PIPE
             >;
         };
 
@@ -136,24 +135,24 @@
                 &kp LT          &kp N9          &kp N8          &kp N7          &kp LBKT        &kp RBKT  &kp PLUS   &kp MINUS  &kp UNDER  &kp GT
                 &hml LALT N0    &hml LSFT N6    &hml LCTRL N5   &hml LGUI N4    &kp LPAR        &kp RPAR  &kp ASTRK  &kp FSLH   &kp GRAVE  &kp PRCNT
                 &kp CARET       &kp N3          &kp N2          &kp N1          &kp LBRC        &kp RBRC  &kp EQUAL  &kp COMMA  &kp PERIOD &kp DLLR
-                                                &to 0  &kp SPACE  &shift_only_tap LSHIFT 0          &to 0  &kp BSPC  &kp DEL
+                                                &kp DEL  &kp BSPC  &shift_only_tap LSHIFT 0          &to 0  &kp SPACE  &to 0
             >;
         };
 
         fn_layer {
             display-name = "Fn";
             // Function keys (matching Kanata config EXACTLY)
-            // Left: F-keys in REVERSE order, Right: transparent except home row mods
+            // Left: F-keys in REVERSE order, Right: same as default layer with home row mods
             // -------------------------------------------------------------------------
-            // | F10 | F9  | F8  | F7  | C-A-F3 |   | Trans | Trans | Trans | Trans | Trans |
-            // | F11 | F6  | F5  | F4  | C-A-F2 |   | Trans | RGui  | RCtl  | RSft  | RAlt  |
-            // | F12 | F3  | F2  | F1  | C-A-F1 |   | Trans | Trans | Trans | Trans | Trans |
-            //             | Exit | Trans | Trans |   | Trans | Trans | Trans |
+            // | F10 | F9  | F8  | F7  | C-A-F3 |   |  J  |  L  |  U  |  Y  |  '  |
+            // | F11 | F6  | F5  | F4  | C-A-F2 |   |  M  | RGui| RCtl| RSft| RAlt|
+            // | F12 | F3  | F2  | F1  | C-A-F1 |   |  K  |  H  |  ,  |  .  |  /  |
+            //             | Del | Bspc | Shift |   | NumSym | Space | Exit |
             bindings = <
-                &kp F10     &kp F9      &kp F8      &kp F7      &kp LC(LA(F3))      &trans  &trans      &trans      &trans      &trans
-                &kp F11     &kp F6      &kp F5      &kp F4      &kp LC(LA(F2))      &trans  &kp RGUI    &kp RCTRL   &kp RSFT    &kp RALT
-                &kp F12     &kp F3      &kp F2      &kp F1      &kp LC(LA(F1))      &trans  &trans      &trans      &trans      &trans
-                                        &to 0  &trans  &trans     &trans  &trans  &trans
+                &kp F10     &kp F9      &kp F8      &kp F7      &kp LC(LA(F3))      &kp J  &kp L           &kp U              &kp Y              &kp SQT
+                &kp F11     &kp F6      &kp F5      &kp F4      &kp LC(LA(F2))      &kp M  &kp RGUI        &kp RCTRL          &kp RSFT           &kp RALT
+                &kp F12     &kp F3      &kp F2      &kp F1      &kp LC(LA(F1))      &kp K  &kp H           &comma_morph       &period_morph      &slash_morph
+                                        &kp DEL  &kp BSPC  &shift_only_tap LSHIFT 0     &numsym_tap 0 0  &kp SPACE  &to 0
             >;
         };
 

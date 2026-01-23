@@ -24,14 +24,7 @@ combos {
         require-prior-idle-ms = <100>;
         key-positions = <1 11>;  // W+R → Copy (Shift+Copy = Cut)
         bindings = <&copy_cut>;
-        layers = <0 2 3 4>;
-    };
-    combo_cut_numsym {
-        timeout-ms = <50>;
-        require-prior-idle-ms = <100>;
-        key-positions = <1 11>;  // W+R → Cut (on num_sym layer)
-        bindings = <&kp K_CUT>;
-        layers = <1>;
+        layers = <0 1 2 3 4>;
     };
     combo_scroll_left {
         timeout-ms = <50>;
@@ -45,20 +38,6 @@ combos {
         require-prior-idle-ms = <100>;
         key-positions = <13 14>;  // T+G → Undo (Shift+Undo = Redo)
         bindings = <&undo_redo>;
-        layers = <0 2 3 4>;
-    };
-    combo_redo_numsym {
-        timeout-ms = <50>;
-        require-prior-idle-ms = <100>;
-        key-positions = <13 14>;  // T+G → Redo (on num_sym layer)
-        bindings = <&kp K_AGAIN>;
-        layers = <1>;
-    };
-    combo_leader {
-        timeout-ms = <50>;
-        require-prior-idle-ms = <100>;
-        key-positions = <23 24>;  // D+V → Leader
-        bindings = <&leader>;
         layers = <0 1 2 3 4>;
     };
     combo_paste_vert {
@@ -115,15 +94,15 @@ combos {
     combo_left_click {
         timeout-ms = <50>;
         require-prior-idle-ms = <100>;
-        key-positions = <15 16>;  // M+N → Left Click
-        bindings = <&mkp MB1>;
+        key-positions = <15 16>;  // M+N → Left Click (Shift+M+N → Right Click)
+        bindings = <&left_right_click>;
         layers = <0 2 3 4>;
     };
     combo_middle_click_numsym {
         timeout-ms = <50>;
         require-prior-idle-ms = <100>;
-        key-positions = <15 16>;  // M+N → Middle Click (on num_sym layer)
-        bindings = <&mkp MB3>;
+        key-positions = <15 16>;  // M+N → Middle Click + Exit (on num_sym layer)
+        bindings = <&middle_click_exit>;
         layers = <1>;
     };
     combo_scroll_right {
@@ -131,13 +110,6 @@ combos {
         require-prior-idle-ms = <100>;
         key-positions = <5 6>;  // J+L → Scroll Right
         bindings = <&msc SCRL_RIGHT>;
-        layers = <0 1 2 3 4>;
-    };
-    combo_right_click {
-        timeout-ms = <50>;
-        require-prior-idle-ms = <100>;
-        key-positions = <25 26>;  // K+H → Right Click
-        bindings = <&mkp MB2>;
         layers = <0 1 2 3 4>;
     };
 
