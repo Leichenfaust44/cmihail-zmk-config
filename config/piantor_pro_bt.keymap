@@ -112,38 +112,25 @@
                 &hml LEFT_GUI DE_N      &hml LEFT_ALT DE_R          &hml LEFT_CONTROL DE_T    &hml LEFT_SHIFT DE_S      &kp DE_G          &kp DE_P          &hmr RIGHT_SHIFT DE_H  &hmr RIGHT_CONTROL DE_A  &hmr RIGHT_ALT DE_E  &hmr RIGHT_GUI DE_I      
                 &kp DE_X                &kp DE_Q                    &kp DE_M                  &kp DE_W                  &kp DE_Z          &kp DE_K          &kp DE_F               &kp DE_COMMA             &kp DE_DOT           &kp DE_MINUS    
                                         &kp ESCAPE                  &space_nav 4 DE_SPACE     &magic_shift LSHIFT 0     &numsym_tap 0 0   &kp BACKSPACE     &kp DEL          
->;
+            >;
         };
 
         num_sym_layer {
             display-name = "NumSym";
             // Number & Symbol layer with home row mods
             // ---------------------------------------------------------------------
-            // |  &  |  9  |  8  |  7  |  [  |   |  ]  |  +  |  -  |  _  |  |  |
-            // | 0+A | 6+S | 5+C | 4+G | (<  |   | )>  | *+G | /+C | `+S | %+A |
-            // |  ^  |  3  |  2  |  1  |  ~  |   |blsh |  =  |  @  |  #  |  $  |
-            //             | --- | --- | --- |   | Smartnum | --- | Exit |
-            // Home row mods: 0=Alt, 6=Shift, 5=Ctrl, 4=Super (left); *=Super, /=Ctrl, `=Shift, %=Alt (right)
-            // (< = ( normally, < when shifted; )> = ) normally, > when shifted
-            bindings = <
-                &kp AMPS        &kp N9          &kp N8          &kp N7          &kp LBKT        &kp RBKT        &kp PLUS        &kp MINUS       &kp UNDER       &kp PIPE
-                &hml LALT N0    &hml LSFT N6    &hml LCTRL N5   &hml LGUI N4    &lpar_lt_morph  &rpar_gt_morph  &hmr RGUI ASTRK &hmr RCTRL FSLH &hmr RSFT GRAVE &hmr RALT PRCNT
-                &kp CARET       &kp N3          &kp N2          &kp N1          &kp TILDE       &kp BSLH        &kp EQUAL       &kp AT          &kp HASH        &kp DLLR
-                                                &trans  &trans  &trans    &smartnum_tap 2 2  &trans  &to 0
-            
-            // ---------------------------------------------------------------------
-            // |  &  |  7  |  8  |  9  |  /  |   |  [  |  ]  | ( < | ) > |  |  |
-            // | ~+G | 4+A | 5+C | 6+S |  *  |   |     | *+S | /+C | `+A | %+G |
+            // |  &  |  7  |  8  |  9  |slsh |   |  [  |  ]  | ( < | ) > |  |  |
+            // | ~+G | 4+A | 5+C | 6+S |  *  |   |  '  | *+S | /+C | `+A | %+G |
             // |  ^  |  1  |  2  |  3  |  +  |   |blsh |  =  |  @  |  #  |  $  |
             //             |  .  |  0  |  -  |   | Smartnum | --- | Exit |
-
-                &kp AMPS                    &kp DE_N7               &kp DE_N8                      &kp DE_N9                &kp DE_SLASH        &kp RBKT        &kp PLUS        &kp MINUS       &kp UNDER       &kp PIPE
-                &hml LEFT_GUI DE_TILDE      &hml LEFT_ALT DE_N4     &hml LEFT_CONTROL DE_N5        &hml LEFT_SHIFT DE_N6    &kp DE_ASTERISK  &rpar_gt_morph  &hmr RGUI ASTRK &hmr RCTRL FSLH &hmr RSFT GRAVE &hmr RALT PRCNT
-                &kp CARET           &kp DE_N1          &kp DE_N2          &kp DE_N3          &kp DE_PLUS       &kp BSLH        &kp EQUAL       &kp AT          &kp HASH        &kp DLLR
-                                                &kp DE_PERIOD  &kp DE_N0  &kp DE_MINUS    &smartnum_tap 2 2  &trans  &to 0        &kp RBKT        &kp PLUS        &kp MINUS       &kp UNDER       &kp PIPE
-
-
->;
+            // Home row mods: ~=Super, 4=Alt, 5=Ctrl, 6=Shift (left); *=Shift, /=Ctrl, `=Alt, %=Super (right)
+            // (< = ( normally, < when shifted; )> = ) normally, > when shifted
+            bindings = <
+                &kp AMPS                    &kp DE_N7               &kp DE_N8                      &kp DE_N9                &kp DE_SLASH        &kp DE_LEFT_BRACKET                    &kp DE_RIGHT_BRACKET            &lpar_lt_morph               &rpar_gt_morph           &kp DE_PIPE
+                &hml LEFT_GUI DE_TILDE      &hml LEFT_ALT DE_N4     &hml LEFT_CONTROL DE_N5        &hml LEFT_SHIFT DE_N6    &kp DE_ASTERISK     &mt DE_APOSTROPHE DE_DOUBLE_QUOTES     &hmr RIGHT_SHIFT DE_ASTERISK    &hmr RIGHT_CONTROL DE_SLASH  &hmr RIGHT_ALT DE_GRAVE  &hmr RIGHT_GUI DE_PERCENT
+                &kp CARET                   &kp DE_N1               &kp DE_N2                      &kp DE_N3                &kp DE_PLUS         &kp DE_BACKSLASH                       &kp DE_EQUAL                    &kp DE_AT_SIGN               &kp DE_HASH              &kp DE_DOLLAR
+                                                                    &kp DE_PERIOD                  &kp DE_N0                &kp DE_MINUS        &smartnum_tap 2 2                      &trans                          &to 0
+            >;
         };
 
         smartnum_layer {
