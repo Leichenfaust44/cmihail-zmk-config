@@ -105,8 +105,8 @@
             // |  B  |  L  |  D  |  C  |  V  |   |  J  |  Y  |  O  |  U  |  ?  |
             // |  N  |  R  |  T  |  S  |  G  |   |  P  |  H  |  A  |  E  |  I  |
             // |  X  |  Q  |  M  |  W  |  Z  |   |  K  |  F  |  ,  |  .  |  -  |
-            //  | Delete | Backspace | Shift |   | NumSym | Space/Nav | ESC |
-            // Home row mods: N=Alt, R=Shift, T=Ctrl, S=Super (left); H=Super, A=Ctrl, E=Shift, I=Alt (right)
+            //  | Delete | Space/Nav | Shift |   | NumSym | Backspace | ESC |
+            // Home row mods: N=Super, R=Alt, T=Ctrl, S=Shift (left); H=Shift, A=Ctrl, E=Alt, I=Super (right)
             bindings = <
                 &kp DE_B                &mt DE_A_UMLAUT DE_L        &mt DE_O_UMLAUT DE_D      &mt DE_U_UMLAUT DE_C      &kp DE_V          &kp DE_J          &kp DE_Y               &kp DE_O                 &kp DE_U             &mt DE_EXCLAMATION DE_QUESTION      
                 &hml LEFT_GUI DE_N      &hml LEFT_ALT DE_R          &hml LEFT_CONTROL DE_T    &hml LEFT_SHIFT DE_S      &kp DE_G          &kp DE_P          &hmr RIGHT_SHIFT DE_H  &hmr RIGHT_CONTROL DE_A  &hmr RIGHT_ALT DE_E  &hmr RIGHT_GUI DE_I      
