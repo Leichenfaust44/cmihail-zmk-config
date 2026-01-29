@@ -105,7 +105,7 @@
             // |  B  |  L  |  D  |  C  |  V  |   |  J  |  Y  |  O  |  U  |  ?  |
             // |  N  |  R  |  T  |  S  |  G  |   |  P  |  H  |  A  |  E  |  I  |
             // |  X  |  Q  |  M  |  W  |  Z  |   |  K  |  F  |  ,  |  .  |  -  |
-            //  | Escape | Space/Nav | Shift |   | NumSym | Backspace | Delete |
+            //             | Escape | Space/Nav | Shift |   | NumSym | Backspace | Delete |
             // Home row mods: N=Super, R=Alt, T=Ctrl, S=Shift (left); H=Shift, A=Ctrl, E=Alt, I=Super (right)
             bindings = <
                 &kp DE_B                &mt DE_A_UMLAUT DE_L        &mt DE_O_UMLAUT DE_D      &mt DE_U_UMLAUT DE_C      &kp DE_V          &kp DE_J          &kp DE_Y               &kp DE_O                 &kp DE_U             &mt DE_EXCLAMATION DE_QUESTION      
@@ -139,17 +139,17 @@
             // urob's smartnum auto-exits on non-number keys
             // Numbers on LEFT side: 987/0654/321, right side: num_sym symbols
             // -------------------------------------------------------------------------
-            // |  &  |  9  |  8  |  7  |  [  |   |  ]  |  +  |  -  |  _  |  |  |
-            // | 0+A | 6+S | 5+C | 4+G | (<  |   | )>  | *+G | /+C | `+S | %+A |
-            // |  ^  |  3  |  2  |  1  |  ~  |   |blsh |  =  |  ,  |  .  |  $  |
-            //  | Exit | Space | Magic Shift |   | Exit | Bspc | Del |
+            // |  &  |  7  |  8  |  9  |slsh |   |  [  |  ]  | ( < | ) > |  |  |
+            // | ~+G | 4+A | 5+C | 6+S |  *  |   |  '  | *+S | /+C | `+A | %+G |
+            // |  ^  |  1  |  2  |  3  |  +  |   |blsh |  =  |  ,  |  .  |  $  |
+            //             | Exit | Space | Magic Shift |   | Exit | Bspc | Del |
             // Exit = return to layer 0 (default layer)
             // (< = ( normally, < when shifted; )> = ) normally, > when shifted
             bindings = <
-                &kp AMPS        &kp N9          &kp N8          &kp N7          &kp LBKT        &kp RBKT  &kp PLUS   &kp MINUS  &kp UNDER  &kp PIPE
-                &hml LALT N0    &hml LSFT N6    &hml LCTRL N5   &hml LGUI N4    &lpar_lt_morph  &rpar_gt_morph  &hmr RGUI ASTRK  &hmr RCTRL FSLH   &hmr RSFT GRAVE  &hmr RALT PRCNT
-                &kp CARET       &kp N3          &kp N2          &kp N1          &kp TILDE       &kp BSLH  &kp EQUAL  &kp COMMA  &kp PERIOD &kp DLLR
-                                                &kp DEL  &kp BSPC  &magic_shift LSHIFT 0          &to 0  &kp SPACE  &to 0
+                &kp DE_AMPERSAND            &kp DE_N7               &kp DE_N8                      &kp DE_N9                &kp DE_SLASH            &kp DE_LEFT_BRACKET                    &kp DE_RIGHT_BRACKET            &lpar_lt_morph               &rpar_gt_morph           &kp DE_PIPE
+                &hml LEFT_GUI DE_TILDE      &hml LEFT_ALT DE_N4     &hml LEFT_CONTROL DE_N5        &hml LEFT_SHIFT DE_N6    &kp DE_ASTERISK         &mt DE_APOSTROPHE DE_DOUBLE_QUOTES     &hmr RIGHT_SHIFT DE_ASTERISK    &hmr RIGHT_CONTROL DE_SLASH  &hmr RIGHT_ALT DE_GRAVE  &hmr RIGHT_GUI DE_PERCENT
+                &kp DE_CARET                &kp DE_N1               &kp DE_N2                      &kp DE_N3                &kp DE_PLUS             &kp DE_BACKSLASH                       &kp DE_EQUAL                    &kp DE_COMMA                 &kp DE_DOT               &kp DE_DOLLAR
+                                                                    &to 0                          &kp DE_SPACE             &magic_shift LSHIFT 0   &to 0                                  &kp BACKSPACE                   &kp DEL
             >;
         };
 
