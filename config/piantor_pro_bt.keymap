@@ -158,14 +158,14 @@
             // Function keys (matching Gallium layout on right side)
             // Left: F-keys in REVERSE order, Right: same as default layer with home row mods
             // -------------------------------------------------------------------------
-            // | F10 | F7  | F8  | F9  | C-A-F3 |   |  J  |  Y  |  O  |  U  |  ,  |
-            // | F11 | F4  | F5  | F6  | C-A-F2 |   |  P  | RGui| RCtl| RSft| RAlt|
-            // | F12 | F1  | F2  | F3  | C-A-F1 |   |  K  |  F  |  '  |  ;  |  .  |
-            //             | Del | Bspc | Shift |   | NumSym | Space | Exit |
+            // | F10 | F7  | F8  | F9  | C-A-F3 |   |     |     |     |     |     |
+            // | F11 | F4  | F5  | F6  | C-A-F2 |   |     | RSft| RCtl| RAlt| RGui|
+            // | F12 | F1  | F2  | F3  | C-A-F1 |   |     |     |     |     |     |
+            //             | Exit | Space | Shift |   | NumSym | Bspc | Del |
             bindings = <
-                &kp F10     &kp F7      &kp F8      &kp F9          &kp LC(LA(F3))          &none              &none               &none                    &none            &none
-                &kp F11     &kp F4      &kp F5      &kp F6          &kp LC(LA(F2))          &none              &kp RIGHT_SHIFT     &kp RIGHT_CONTROL        &kp RIGHT_ALT    &kp RIGHT_GUI
-                &kp F12     &kp F1      &kp F2      &kp F3          &kp LC(LA(F1))          &none              &none               &none                    &none            &none
+                &kp F10     &kp F7      &kp F8      &kp F9          &none                   &none              &none               &none                    &none            &none
+                &kp F11     &kp F4      &kp F5      &kp F6          &none                   &none              &kp RIGHT_SHIFT     &kp RIGHT_CONTROL        &kp RIGHT_ALT    &kp RIGHT_GUI
+                &kp F12     &kp F1      &kp F2      &kp F3          &none                   &none              &none               &none                    &none            &none
                                         &to 0       &kp DE_SPACE    &magic_shift LSHIFT 0   &numsym_tap 0 0    &kp BACKSPACE       &kp DEL
             >;
         };
