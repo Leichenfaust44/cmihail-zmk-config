@@ -121,7 +121,7 @@ nav_a_hml: nav_a_homerow_left {
     hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 25 26 27 28 29 33 34 35>;
     hold-trigger-on-release;
 };
-// Space nav layer: tap=space, hold=nav_sys layer (excludes dangerous positions)
+// Space nav layer: tap=space, hold=nav_sys layer (only triggers on right-side navigation keys)
 space_nav: space_nav_layer {
     compatible = "zmk,behavior-hold-tap";
     #binding-cells = <2>;
@@ -130,7 +130,7 @@ space_nav: space_nav_layer {
     tapping-term-ms = <280>;
     quick-tap-ms = <175>;
     bindings = <&mo>, <&kp>;
-    hold-trigger-key-positions = <1 2 3 4 5 6 7 8 11 12 13 14 15 16 17 18 21 22 23 24 25 26 27 28 30 31 32 33 34 35>;
+    hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 25 26 27 28 29>;
     hold-trigger-on-release;
 };
 smartnum_tap: smartnum_toggle_hold {
