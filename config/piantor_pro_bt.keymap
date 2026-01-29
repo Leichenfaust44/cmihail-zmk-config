@@ -8,7 +8,7 @@
  *
  * Gallium (Layer 0): Default layer with home row mods
  *   - Customizations: X↔Q swapped, / replaced with ; (standard Gallium has / on bottom row)
- *   - Home row mods: N=Alt, R=Shift, T=Ctrl, S=Super (left); H=Super, A=Ctrl, E=Shift, I=Alt (right)
+ *   - Home row mods: N=Super, R=Alt, T=Ctrl, S=Shift (left); H=Shift, A=Ctrl, E=Alt, I=Super (right)
  *   - Thumbs: Delete | Backspace | Magic Shift | NumSym (tap=sticky num_sym, shift+tap=sticky fn, hold=momentary num_sym) | Space/Nav | ESC
  *   - Magic Shift (urob): tap after letter=repeat, tap otherwise=sticky shift, double-tap=caps word, hold=shift
  *   - Combos (all 50ms timeout):
