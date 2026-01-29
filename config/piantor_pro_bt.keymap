@@ -154,7 +154,7 @@
         };
 
         fn_layer {
-            display-name = "Fn";
+            display-name = "Fun";
             // Function keys (matching Gallium layout on right side)
             // Left: F-keys in REVERSE order, Right: same as default layer with home row mods
             // -------------------------------------------------------------------------
