@@ -9,7 +9,7 @@
  * Gallium (Layer 0): Default layer with home row mods
  *   - Customizations: X↔Q swapped, / replaced with ; (standard Gallium has / on bottom row)
  *   - Home row mods: N=Super, R=Alt, T=Ctrl, S=Shift (left); H=Shift, A=Ctrl, E=Alt, I=Super (right)
- *   - Thumbs: Delete | Backspace | Magic Shift | NumSym (tap=sticky num_sym, shift+tap=sticky fn, hold=momentary num_sym) | Space/Nav | ESC
+ *   - Thumbs: Escape | Space/Nav | Magic Shift | NumSym (tap=sticky num_sym, shift+tap=sticky fn, hold=momentary num_sym) | Backspace | Delete
  *   - Magic Shift (urob): tap after letter=repeat, tap otherwise=sticky shift, double-tap=caps word, hold=shift
  *   - Combos (all 50ms timeout):
  *     - Tab/Return: S+T = Tab, N+E = Return
@@ -105,7 +105,7 @@
             // |  B  |  L  |  D  |  C  |  V  |   |  J  |  Y  |  O  |  U  |  ?  |
             // |  N  |  R  |  T  |  S  |  G  |   |  P  |  H  |  A  |  E  |  I  |
             // |  X  |  Q  |  M  |  W  |  Z  |   |  K  |  F  |  ,  |  .  |  -  |
-            //  | Delete | Space/Nav | Shift |   | NumSym | Backspace | ESC |
+            //  | Escape | Space/Nav | Shift |   | NumSym | Backspace | Delete |
             // Home row mods: N=Super, R=Alt, T=Ctrl, S=Shift (left); H=Shift, A=Ctrl, E=Alt, I=Super (right)
             bindings = <
                 &kp DE_B                &mt DE_A_UMLAUT DE_L        &mt DE_O_UMLAUT DE_D      &mt DE_U_UMLAUT DE_C      &kp DE_V          &kp DE_J          &kp DE_Y               &kp DE_O                 &kp DE_U             &mt DE_EXCLAMATION DE_QUESTION      
