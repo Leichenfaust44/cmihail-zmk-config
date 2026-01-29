@@ -122,14 +122,14 @@
             // |  &  |  7  |  8  |  9  |slsh |   |  [  |  ]  | ( < | ) > |  |  |
             // | ~+G | 4+A | 5+C | 6+S |  *  |   |  '  | *+S | /+C | `+A | %+G |
             // |  ^  |  1  |  2  |  3  |  +  |   |blsh |  =  |  @  |  #  |  $  |
-            //             |  .  |  0  |  -  |   | Smartnum | --- | Exit |
+            //             |  .  |  0  |  -  |   | Smartnum |  | Exit |
             // Home row mods: ~=Super, 4=Alt, 5=Ctrl, 6=Shift (left); *=Shift, /=Ctrl, `=Alt, %=Super (right)
             // (< = ( normally, < when shifted; )> = ) normally, > when shifted
             bindings = <
                 &kp DE_AMPERSAND            &kp DE_N7               &kp DE_N8                      &kp DE_N9                &kp DE_SLASH        &kp DE_LEFT_BRACKET                    &kp DE_RIGHT_BRACKET            &lpar_lt_morph               &rpar_gt_morph           &kp DE_PIPE
                 &hml LEFT_GUI DE_TILDE      &hml LEFT_ALT DE_N4     &hml LEFT_CONTROL DE_N5        &hml LEFT_SHIFT DE_N6    &kp DE_ASTERISK     &mt DE_APOSTROPHE DE_DOUBLE_QUOTES     &hmr RIGHT_SHIFT DE_ASTERISK    &hmr RIGHT_CONTROL DE_SLASH  &hmr RIGHT_ALT DE_GRAVE  &hmr RIGHT_GUI DE_PERCENT
                 &kp CARET                   &kp DE_N1               &kp DE_N2                      &kp DE_N3                &kp DE_PLUS         &kp DE_BACKSLASH                       &kp DE_EQUAL                    &kp DE_AT_SIGN               &kp DE_HASH              &kp DE_DOLLAR
-                                                                    &kp DE_PERIOD                  &kp DE_N0                &kp DE_MINUS        &smartnum_tap 2 2                      &trans                          &to 0
+                                                                    &kp DE_PERIOD                  &kp DE_N0                &kp DE_MINUS        &smartnum_tap 2 2                      &none                           &to 0
             >;
         };
 
@@ -147,7 +147,7 @@
             // (< = ( normally, < when shifted; )> = ) normally, > when shifted
             bindings = <
                 &kp DE_AMPERSAND            &kp DE_N7               &kp DE_N8                      &kp DE_N9                &kp DE_SLASH            &kp DE_LEFT_BRACKET                    &kp DE_RIGHT_BRACKET            &lpar_lt_morph               &rpar_gt_morph           &kp DE_PIPE
-                &hml LEFT_GUI &kp DE_N0      &hml LEFT_ALT DE_N4     &hml LEFT_CONTROL DE_N5        &hml LEFT_SHIFT DE_N6    &kp DE_ASTERISK         &mt DE_APOSTROPHE DE_DOUBLE_QUOTES     &hmr RIGHT_SHIFT DE_ASTERISK    &hmr RIGHT_CONTROL DE_SLASH  &hmr RIGHT_ALT DE_GRAVE  &hmr RIGHT_GUI DE_PERCENT
+                &hml LEFT_GUI &kp DE_N0      &hml LEFT_ALT DE_N4     &hml LEFT_CONTROL DE_N5       &hml LEFT_SHIFT DE_N6    &kp DE_ASTERISK         &mt DE_APOSTROPHE DE_DOUBLE_QUOTES     &hmr RIGHT_SHIFT DE_ASTERISK    &hmr RIGHT_CONTROL DE_SLASH  &hmr RIGHT_ALT DE_GRAVE  &hmr RIGHT_GUI DE_PERCENT
                 &kp DE_CARET                &kp DE_N1               &kp DE_N2                      &kp DE_N3                &kp DE_PLUS             &kp DE_BACKSLASH                       &kp DE_EQUAL                    &kp DE_COMMA                 &kp DE_DOT               &kp DE_DOLLAR
                                                                     &to 0                          &kp DE_SPACE             &magic_shift LSHIFT 0   &to 0                                  &kp BACKSPACE                   &kp DEL
             >;
@@ -158,15 +158,15 @@
             // Function keys (matching Gallium layout on right side)
             // Left: F-keys in REVERSE order, Right: same as default layer with home row mods
             // -------------------------------------------------------------------------
-            // | F10 | F9  | F8  | F7  | C-A-F3 |   |  J  |  Y  |  O  |  U  |  ,  |
-            // | F11 | F6  | F5  | F4  | C-A-F2 |   |  P  | RGui| RCtl| RSft| RAlt|
-            // | F12 | F3  | F2  | F1  | C-A-F1 |   |  K  |  F  |  '  |  ;  |  .  |
+            // | F10 | F7  | F8  | F9  | C-A-F3 |   |  J  |  Y  |  O  |  U  |  ,  |
+            // | F11 | F4  | F5  | F6  | C-A-F2 |   |  P  | RGui| RCtl| RSft| RAlt|
+            // | F12 | F1  | F2  | F3  | C-A-F1 |   |  K  |  F  |  '  |  ;  |  .  |
             //             | Del | Bspc | Shift |   | NumSym | Space | Exit |
             bindings = <
-                &kp F10     &kp F9      &kp F8      &kp F7      &kp LC(LA(F3))      &kp J  &kp Y           &kp O              &kp U              &kp COMMA
-                &kp F11     &kp F6      &kp F5      &kp F4      &kp LC(LA(F2))      &kp P  &kp RGUI        &kp RCTRL          &kp RSFT           &kp RALT
-                &kp F12     &kp F3      &kp F2      &kp F1      &kp LC(LA(F1))      &kp K  &kp F           &kp SQT            &kp SEMI           &period_morph
-                                        &kp DEL  &kp BSPC  &magic_shift LSHIFT 0     &numsym_tap 0 0  &kp SPACE  &to 0
+                &kp F10     &kp F7      &kp F8      &kp F9          &kp LC(LA(F3))          &none              &none               &none                    &none            &none
+                &kp F11     &kp F4      &kp F5      &kp F6          &kp LC(LA(F2))          &none              &kp RIGHT_SHIFT     &kp RIGHT_CONTROL        &kp RIGHT_ALT    &kp RIGHT_GUI
+                &kp F12     &kp F1      &kp F2      &kp F3          &kp LC(LA(F1))          &none              &none               &none                    &none            &none
+                                        &to 0       &kp DE_SPACE    &magic_shift LSHIFT 0   &numsym_tap 0 0    &kp BACKSPACE       &kp DEL
             >;
         };
 
