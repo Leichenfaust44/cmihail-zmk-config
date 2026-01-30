@@ -17,6 +17,21 @@ combos {
         layers = <0 1 2 3 4>;
     };
 
+    combo_bspc {
+        timeout-ms = <50>;
+        require-prior-idle-ms = <100>;
+        key-positions = <7 8>;  // Y+O → Backspace
+        bindings = <&kp BACKSPACE>;
+        layers = <0 1 2 3 4>;
+    };
+    combo_del {
+        timeout-ms = <50>;
+        require-prior-idle-ms = <100>;
+        key-positions = <8 9>;  // O+U → Delete
+        bindings = <&kp DELETE>;
+        layers = <0 1 2 3 4>;
+    };
+
     // ===== VERTICAL COMBOS MOVEMENT (50ms timeout, 100ms require-prior-idle) =====
 
     // Navigation combos
