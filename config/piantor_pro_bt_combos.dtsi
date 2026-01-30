@@ -1,3 +1,5 @@
+#include "keys_de_swiss.h"
+
 combos {
     compatible = "zmk,combos";
 
