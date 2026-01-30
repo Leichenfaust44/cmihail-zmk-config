@@ -28,7 +28,7 @@ combos {
         timeout-ms = <50>;
         require-prior-idle-ms = <100>;
         key-positions = <8 9>;  // O+U → Delete
-        bindings = <&kp DELETE>;
+        bindings = <&kp DEL>;
         layers = <0 1 2 3 4>;
     };
 
