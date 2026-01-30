@@ -17,7 +17,7 @@ combos {
         layers = <0 1 2 3 4>;
     };
 
-    // ===== VERTICAL COMBOS (50ms timeout, 100ms require-prior-idle) =====
+    // ===== VERTICAL COMBOS MOVEMENT (50ms timeout, 100ms require-prior-idle) =====
 
     // Navigation combos
     combo_page_up {
@@ -76,4 +76,54 @@ combos {
         bindings = <&kp RIGHT>;
         layers = <0 1 2 3 4>;
     };
+
+    // ===== VERTICAL COMBOS CHARACTERS (50ms timeout, 100ms require-prior-idle) =====
+
+    combo_char_at {
+        timeout-ms = <50>;
+        require-prior-idle-ms = <100>;
+        key-positions = <2 12>;  // L+R
+        bindings = <&kp DE_AT_SIGN>;
+        layers = <0 1 2 3 4>;
+    };
+
+    combo_char_percent {
+        timeout-ms = <50>;
+        require-prior-idle-ms = <100>;
+        key-positions = <12 22>;  // R+Q
+        bindings = <&kp DE_PERCENT>;
+        layers = <0 1 2 3 4>;
+    };
+
+    combo_char_hash {
+        timeout-ms = <50>;
+        require-prior-idle-ms = <100>;
+        key-positions = <3 13>;  // C+S
+        bindings = <&kp DE_HASH>;
+        layers = <0 1 2 3 4>;
+    };
+
+    combo_char_bslh {
+        timeout-ms = <50>;
+        require-prior-idle-ms = <100>;
+        key-positions = <13 23>;  // S+W
+        bindings = <&kp DE_BACKSLASH>;
+        layers = <0 1 2 3 4>;
+
+    combo_char_dollar {
+        timeout-ms = <50>;
+        require-prior-idle-ms = <100>;
+        key-positions = <4 14>;  // C+S
+        bindings = <&kp DE_DOLLAR>;
+        layers = <0 1 2 3 4>;
+    };
+
+    combo_char_equal {
+        timeout-ms = <50>;
+        require-prior-idle-ms = <100>;
+        key-positions = <14 24>;  // S+W
+        bindings = <&kp DE_EQUAL>;
+        layers = <0 1 2 3 4>;
+    };
+
 };
