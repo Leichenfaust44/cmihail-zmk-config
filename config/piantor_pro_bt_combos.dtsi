@@ -77,7 +77,7 @@ combos {
         layers = <0 1 2 3 4>;
     };
 
-    // ===== VERTICAL COMBOS CHARACTERS (50ms timeout, 100ms require-prior-idle) =====
+    // ===== VERTICAL COMBOS LEFT CHARACTERS (50ms timeout, 100ms require-prior-idle) =====
 
     combo_char_at {
         timeout-ms = <50>;
@@ -98,7 +98,7 @@ combos {
     combo_char_hash {
         timeout-ms = <50>;
         require-prior-idle-ms = <100>;
-        key-positions = <3 13>;  // C+S
+        key-positions = <3 13>;  // D+T
         bindings = <&kp DE_HASH>;
         layers = <0 1 2 3 4>;
     };
@@ -106,7 +106,7 @@ combos {
     combo_char_bslh {
         timeout-ms = <50>;
         require-prior-idle-ms = <100>;
-        key-positions = <13 23>;  // S+W
+        key-positions = <13 23>;  // T+M
         bindings = <&kp DE_BACKSLASH>;
         layers = <0 1 2 3 4>;
     };
@@ -124,6 +124,56 @@ combos {
         require-prior-idle-ms = <100>;
         key-positions = <14 24>;  // S+W
         bindings = <&kp DE_EQUAL>;
+        layers = <0 1 2 3 4>;
+    };
+
+    // ===== VERTICAL COMBOS RIGHT CHARACTERS (50ms timeout, 100ms require-prior-idle) =====
+
+    combo_char_plus {
+        timeout-ms = <50>;
+        require-prior-idle-ms = <100>;
+        key-positions = <7 17>;  // Z+H
+        bindings = <&kp DE_PLUS>;
+        layers = <0 1 2 3 4>;
+    };
+
+    combo_char_minus {
+        timeout-ms = <50>;
+        require-prior-idle-ms = <100>;
+        key-positions = <17 27>;  // H+F
+        bindings = <&kp DE_MINUS>;
+        layers = <0 1 2 3 4>;
+    };
+
+    combo_char_astrk {
+        timeout-ms = <50>;
+        require-prior-idle-ms = <100>;
+        key-positions = <8 18>;  // Q+A
+        bindings = <&kp DE_ASTERISK>;
+        layers = <0 1 2 3 4>;
+    };
+
+    combo_char_slash {
+        timeout-ms = <50>;
+        require-prior-idle-ms = <100>;
+        key-positions = <18 28>;  // A+,
+        bindings = <&kp DE_SLASH>;
+        layers = <0 1 2 3 4>;
+    };
+
+    combo_char_euro {
+        timeout-ms = <50>;
+        require-prior-idle-ms = <100>;
+        key-positions = <9 19>;  // U+E
+        bindings = <&kp DE_EURO>;
+        layers = <0 1 2 3 4>;
+    };
+
+    combo_char_amps {
+        timeout-ms = <50>;
+        require-prior-idle-ms = <100>;
+        key-positions = <19 29>;  // E+.
+        bindings = <&kp DE_AMPERSAND>;
         layers = <0 1 2 3 4>;
     };
 
