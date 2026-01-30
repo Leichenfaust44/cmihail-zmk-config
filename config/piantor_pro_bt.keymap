@@ -140,14 +140,10 @@ display-name = "SmartNum";
 // urob's smartnum auto-exits on non-number keys
 // Numbers on LEFT side: 987/0654/321, right side: num_sym symbols
 // -------------------------------------------------------------------------
-            // |  &  |  7  |  8  |  9  |  [  |   |  ]  |  +  |  -  |  _  |  |  |
-            // | 0+A | 4+S | 5+C | 6+G | (<  |   | )>  | *+G | /+C | `+S | %+A |
-            // |  ^  |  1  |  2  |  3  |  ~  |   |blsh |  =  |  ,  |  .  |  $  |
-            //  | Exit | Space | Magic Shift |   | Exit | Bspc | Del |
-            // |  &  |  7  |  8  |  9  |slsh |   |  [  |  ]  | ( < | ) > |  |  |
-            // | ~+G | 4+A | 5+C | 6+S |  *  |   |  '  | *+S | /+C | `+A | %+G |
-            // |  ^  |  1  |  2  |  3  |  +  |   |blsh |  =  |  ,  |  .  |  $  |
-            //             | Exit | Space | Magic Shift |   | Exit | Bspc | Del |
+// |  &  |  7  |  8  |  9  |slsh |   |  [  |  ]  | ( < | ) > |  |  |
+// | ~+G | 4+A | 5+C | 6+S |  *  |   |  '  | *+S | /+C | `+A | %+G |
+// |  ^  |  1  |  2  |  3  |  +  |   |blsh |  =  |  ,  |  .  |  $  |
+//             | Exit | Space | Magic Shift |   | Exit | Bspc | Del |
 // Exit = return to layer 0 (default layer)
 // (< = ( normally, < when shifted; )> = ) normally, > when shifted
 bindings = <
