@@ -1,5 +1,3 @@
-#include "keys_de_swiss.h"
-
 combos {
     compatible = "zmk,combos";
 
@@ -85,7 +83,7 @@ combos {
         timeout-ms = <50>;
         require-prior-idle-ms = <100>;
         key-positions = <2 12>;  // L+R
-        bindings = <&kp DE_AT_SIGN>;
+        bindings = <&kp AT_SIGN>;
         layers = <0 1 2 3 4>;
     };
 
@@ -93,7 +91,7 @@ combos {
         timeout-ms = <50>;
         require-prior-idle-ms = <100>;
         key-positions = <12 22>;  // R+Q
-        bindings = <&kp DE_PERCENT>;
+        bindings = <&kp PERCENT>;
         layers = <0 1 2 3 4>;
     };
 
@@ -101,7 +99,7 @@ combos {
         timeout-ms = <50>;
         require-prior-idle-ms = <100>;
         key-positions = <3 13>;  // C+S
-        bindings = <&kp DE_HASH>;
+        bindings = <&kp HASH>;
         layers = <0 1 2 3 4>;
     };
 
@@ -109,14 +107,14 @@ combos {
         timeout-ms = <50>;
         require-prior-idle-ms = <100>;
         key-positions = <13 23>;  // S+W
-        bindings = <&kp DE_BACKSLASH>;
+        bindings = <&kp BACKSLASH>;
         layers = <0 1 2 3 4>;
 
     combo_char_dollar {
         timeout-ms = <50>;
         require-prior-idle-ms = <100>;
         key-positions = <4 14>;  // C+S
-        bindings = <&kp DE_DOLLAR>;
+        bindings = <&kp DOLLAR>;
         layers = <0 1 2 3 4>;
     };
 
@@ -124,7 +122,7 @@ combos {
         timeout-ms = <50>;
         require-prior-idle-ms = <100>;
         key-positions = <14 24>;  // S+W
-        bindings = <&kp DE_EQUAL>;
+        bindings = <&kp EQUAL>;
         layers = <0 1 2 3 4>;
     };
 
