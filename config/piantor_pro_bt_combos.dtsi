@@ -83,7 +83,7 @@ combos {
         timeout-ms = <50>;
         require-prior-idle-ms = <100>;
         key-positions = <2 12>;  // L+R
-        bindings = <&kp AT_SIGN>;
+        bindings = <&kp DE_AT_SIGN>;
         layers = <0 1 2 3 4>;
     };
 
