@@ -120,8 +120,8 @@ num_sym_layer {
 display-name = "NumSym";
 // Number & Symbol layer with home row mods
 // ---------------------------------------------------------------------
-// |  &  |  7  |  8  |  9  |slsh |   |  [  |  ]  | ( < | ) > |  |  |
-// | 0+G | 4+A | 5+C | 6+S |  *  |   |  "  | '+S | ^+C | `+A | %+G |
+// |  -  |  7  |  8  |  9  |slsh |   |  [  |  ]  | ( < | ) > |  |  |
+// | 0+G | 4+A | 5+C | 6+S |  *  |   | " ' | &+S | ^+C | `+A | %+G |
 // |  .  |  1  |  2  |  3  |  +  |   |blsh |  =  |  @  |  #  |  $  |
 //             |  .  |  ~  |  -  |   | Smartnum | --- | Exit |
 // Home row mods: ~=Super, 4=Alt, 5=Ctrl, 6=Shift (left); *=Shift, /=Ctrl, `=Alt, %=Super (right)
@@ -140,8 +140,8 @@ display-name = "SmartNum";
 // urob's smartnum auto-exits on non-number keys
 // Numbers on LEFT side: 987/0654/321, right side: num_sym symbols
 // -------------------------------------------------------------------------
-// |  &  |  7  |  8  |  9  |slsh |   |  [  |  ]  | ( < | ) > |  |  |
-// | 0+G | 4+A | 5+C | 6+S |  *  |   |  "  | '+S | ^+C | `+A | %+G |
+// |  -  |  7  |  8  |  9  |slsh |   |  [  |  ]  | ( < | ) > |  |  |
+// | 0+G | 4+A | 5+C | 6+S |  *  |   | " ' | &+S | ^+C | `+A | %+G |
 // |  .  |  1  |  2  |  3  |  +  |   |blsh |  =  |  @  |  #  |  $  |
 //             | Exit | Space | Magic Shift |   | Exit | Bspc | Del |
 // Exit = return to layer 0 (default layer)
