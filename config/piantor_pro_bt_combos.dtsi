@@ -20,14 +20,14 @@ combos {
     combo_bspc {
         timeout-ms = <50>;
         require-prior-idle-ms = <100>;
-        key-positions = <7 8>;  // Y+O → Backspace
+        key-positions = <6 7>;  // Y+O → Backspace
         bindings = <&kp BACKSPACE>;
         layers = <0 1 2 3 4>;
     };
     combo_del {
         timeout-ms = <50>;
         require-prior-idle-ms = <100>;
-        key-positions = <8 9>;  // O+U → Delete
+        key-positions = <7 8>;  // O+U → Delete
         bindings = <&kp DELETE>;
         bindings = <&kp DEL>;
         layers = <0 1 2 3 4>;
@@ -38,7 +38,7 @@ combos {
     combo_char_at {
         timeout-ms = <50>;
         require-prior-idle-ms = <100>;
-        key-positions = <2 12>;  // L+R
+        key-positions = <1 11>;  // L+R
         bindings = <&kp DE_AT_SIGN>;
         layers = <0 1 2 3 4>;
     };
@@ -46,7 +46,7 @@ combos {
     combo_char_percent {
         timeout-ms = <50>;
         require-prior-idle-ms = <100>;
-        key-positions = <12 22>;  // R+Q
+        key-positions = <11 21>;  // R+Q
         bindings = <&kp DE_PERCENT>;
         layers = <0 1 2 3 4>;
     };
@@ -54,7 +54,7 @@ combos {
     combo_char_hash {
         timeout-ms = <50>;
         require-prior-idle-ms = <100>;
-        key-positions = <3 13>;  // D+T
+        key-positions = <2 12>;  // D+T
         bindings = <&kp DE_HASH>;
         layers = <0 1 2 3 4>;
     };
@@ -62,7 +62,7 @@ combos {
     combo_char_bslh {
         timeout-ms = <50>;
         require-prior-idle-ms = <100>;
-        key-positions = <13 23>;  // T+M
+        key-positions = <12 22>;  // T+M
         bindings = <&kp DE_BACKSLASH>;
         layers = <0 1 2 3 4>;
     };
@@ -70,7 +70,7 @@ combos {
     combo_char_dollar {
         timeout-ms = <50>;
         require-prior-idle-ms = <100>;
-        key-positions = <4 14>;  // C+S
+        key-positions = <3 13>;  // C+S
         bindings = <&kp DE_DOLLAR>;
         layers = <0 1 2 3 4>;
     };
@@ -78,7 +78,7 @@ combos {
     combo_char_equal {
         timeout-ms = <50>;
         require-prior-idle-ms = <100>;
-        key-positions = <14 24>;  // S+W
+        key-positions = <13 23>;  // S+W
         bindings = <&kp DE_EQUAL>;
         layers = <0 1 2 3 4>;
     };
@@ -88,7 +88,7 @@ combos {
     combo_char_plus {
         timeout-ms = <50>;
         require-prior-idle-ms = <100>;
-        key-positions = <7 17>;  // Z+H
+        key-positions = <6 16>;  // Z+H
         bindings = <&kp DE_PLUS>;
         layers = <0 1 2 3 4>;
     };
@@ -96,7 +96,7 @@ combos {
     combo_char_minus {
         timeout-ms = <50>;
         require-prior-idle-ms = <100>;
-        key-positions = <17 27>;  // H+F
+        key-positions = <16 26>;  // H+F
         bindings = <&kp DE_MINUS>;
         layers = <0 1 2 3 4>;
     };
@@ -104,7 +104,7 @@ combos {
     combo_char_astrk {
         timeout-ms = <50>;
         require-prior-idle-ms = <100>;
-        key-positions = <8 18>;  // Q+A
+        key-positions = <7 17>;  // Q+A
         bindings = <&kp DE_ASTERISK>;
         layers = <0 1 2 3 4>;
     };
@@ -112,7 +112,7 @@ combos {
     combo_char_slash {
         timeout-ms = <50>;
         require-prior-idle-ms = <100>;
-        key-positions = <18 28>;  // A+,
+        key-positions = <17 27>;  // A+,
         bindings = <&kp DE_SLASH>;
         layers = <0 1 2 3 4>;
     };
@@ -120,7 +120,7 @@ combos {
     combo_char_euro {
         timeout-ms = <50>;
         require-prior-idle-ms = <100>;
-        key-positions = <9 19>;  // U+E
+        key-positions = <8 18>;  // U+E
         bindings = <&kp DE_EURO>;
         layers = <0 1 2 3 4>;
     };
@@ -128,7 +128,7 @@ combos {
     combo_char_amps {
         timeout-ms = <50>;
         require-prior-idle-ms = <100>;
-        key-positions = <19 29>;  // E+.
+        key-positions = <18 28>;  // E+.
         bindings = <&kp DE_AMPERSAND>;
         layers = <0 1 2 3 4>;
     }; 
@@ -140,7 +140,7 @@ combos {
     combo_char_lpar {
         timeout-ms = <50>;
         require-prior-idle-ms = <100>;
-        key-positions = <27 28>;  // F+,
+        key-positions = <26 27>;  // F+,
         bindings = <&kp DE_LEFT_PARENTHESIS>;
         layers = <0 1 2 3 4>;
     };
@@ -148,7 +148,7 @@ combos {
     combo_char_rpar {
         timeout-ms = <50>;
         require-prior-idle-ms = <100>;
-        key-positions = <28 29>;  // ,+.
+        key-positions = <27 28>;  // ,+.
         bindings = <&kp DE_RIGHT_PARENTHESIS>;
         layers = <0 1 2 3 4>;
     }; 
