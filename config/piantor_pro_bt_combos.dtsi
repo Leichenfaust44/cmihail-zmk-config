@@ -5,28 +5,19 @@ combos {
     combo_tab {
         timeout-ms = <50>;
         require-prior-idle-ms = <100>;
-        key-positions = <12 13>;  // S+T → Return
+        key-positions = <12 13>;  // T+S → Return
         bindings = <&kp RET>;
         layers = <0 1 2 3 4>;
     };
     combo_return {
         timeout-ms = <50>;
         require-prior-idle-ms = <100>;
-        key-positions = <16 17>;  // N+E → Tab
+        key-positions = <16 17>;  // H+A → Tab
         bindings = <&kp TAB>;
         layers = <0 1 2 3 4>;
     };
 
     // ===== VERTICAL COMBOS (50ms timeout, 100ms require-prior-idle) =====
-    // Edit combos
-
-    combo_right_click_numsym {
-        timeout-ms = <50>;
-        require-prior-idle-ms = <100>;
-        key-positions = <13 14>;  // T+G → Right Click + Exit (on num_sym layer only)
-        bindings = <&right_click_exit>;
-        layers = <1>;
-    };
 
     // Navigation combos
     combo_page_up {
