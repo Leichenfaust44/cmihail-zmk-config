@@ -140,9 +140,9 @@ display-name = "SmartNum";
 // urob's smartnum auto-exits on non-number keys
 // Numbers on LEFT side: 987/0654/321, right side: num_sym symbols
 // -------------------------------------------------------------------------
-            // |  &  |  9  |  8  |  7  |  [  |   |  ]  |  +  |  -  |  _  |  |  |
-            // | 0+A | 6+S | 5+C | 4+G | (<  |   | )>  | *+G | /+C | `+S | %+A |
-            // |  ^  |  3  |  2  |  1  |  ~  |   |blsh |  =  |  ,  |  .  |  $  |
+            // |  &  |  7  |  8  |  9  |  [  |   |  ]  |  +  |  -  |  _  |  |  |
+            // | 0+A | 4+S | 5+C | 6+G | (<  |   | )>  | *+G | /+C | `+S | %+A |
+            // |  ^  |  1  |  2  |  3  |  ~  |   |blsh |  =  |  ,  |  .  |  $  |
             //  | Exit | Space | Magic Shift |   | Exit | Bspc | Del |
             // |  &  |  7  |  8  |  9  |slsh |   |  [  |  ]  | ( < | ) > |  |  |
             // | ~+G | 4+A | 5+C | 6+S |  *  |   |  '  | *+S | /+C | `+A | %+G |
