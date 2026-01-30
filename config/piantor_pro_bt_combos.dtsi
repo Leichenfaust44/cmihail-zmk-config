@@ -79,6 +79,12 @@ combos {
 
     // ===== VERTICAL COMBOS CHARACTERS (50ms timeout, 100ms require-prior-idle) =====
 
-
+    combo_char_at {
+        timeout-ms = <50>;
+        require-prior-idle-ms = <100>;
+        key-positions = <2 12>;  // L+R
+        bindings = <&kp AT_SIGN>;
+        layers = <0 1 2 3 4>;
+    };
 
 };
