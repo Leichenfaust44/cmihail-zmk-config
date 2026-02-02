@@ -127,10 +127,10 @@ display-name = "NumSym";
 // Home row mods: ~=Super, 4=Alt, 5=Ctrl, 6=Shift (left); *=Shift, /=Ctrl, `=Alt, %=Super (right)
 // (< = ( normally, < when shifted; )> = ) normally, > when shifted
 bindings = <
-                        &kp DE_ACUTE            &kp DE_N7               &kp DE_N8                      &kp DE_N9                &kp DE_SECTION        &kp DE_LEFT_BRACKET                    &kp DE_RIGHT_BRACKET            &kp DE_LESS_THAN               &kp DE_GREATER_THAN             &kp DE_PIPE
-            &hml LEFT_GUI DE_N0      &hml LEFT_ALT DE_N4     &hml LEFT_CONTROL DE_N5        &hml LEFT_SHIFT DE_N6    &DE_NOT     &kp DE_DOUBLE_QUOTES     &hmr RIGHT_SHIFT DE_APOSTROPHE    &hmr RIGHT_CONTROL DE_CARET  &hmr RIGHT_ALT DE_GRAVE  &hmr RIGHT_GUI DE_TILDE 
-            &kp DE_PERIOD                   &kp DE_N1               &kp DE_N2                      &kp DE_N3                &DE_DEGREE         &kp DE_LEFT_BRACE                       &kp DE_RIGHT_BRACE                    &kp DE_POUND_SIGN               &kp DE_CENT             &kp DE_BROKEN_BAR
-            &trans                  &trans                &trans        &smartnum_tap 2 2                      &trans                          &to 0
+            &kp DE_ACUTE             &kp DE_N7               &kp DE_N8                      &kp DE_N9                &kp DE_SECTION        &kp DE_LEFT_BRACKET                    &kp DE_RIGHT_BRACKET                   &kp DE_LESS_THAN               &kp DE_GREATER_THAN             &kp DE_PIPE
+            &hml LEFT_GUI DE_N0      &hml LEFT_ALT DE_N4     &hml LEFT_CONTROL DE_N5        &hml LEFT_SHIFT DE_N6    &kp DE_NOT            &kp DE_DOUBLE_QUOTES                   &hmr RIGHT_SHIFT DE_APOSTROPHE         &hmr RIGHT_CONTROL DE_CARET    &hmr RIGHT_ALT DE_GRAVE         &hmr RIGHT_GUI DE_TILDE 
+            &kp DE_PERIOD            &kp DE_N1               &kp DE_N2                      &kp DE_N3                &kp DE_DEGREE         &kp DE_LEFT_BRACE                      &kp DE_RIGHT_BRACE                     &kp DE_POUND_SIGN              &kp DE_CENT                     &kp DE_BROKEN_BAR
+                                                             &trans                         &trans                   &trans                &smartnum_tap 2 2                      &trans                                 &to 0
             >;
 };
 
