@@ -125,7 +125,6 @@ display-name = "NumSym";
 // |  .  |  1  |  2  |  3  |  °  |   |  {  |  }  |  £  |  ¢  |  ¦  |
 //             | --- | --- | --- |   | Smartnum | --- | Exit |
 // Home row mods: ~=Super, 4=Alt, 5=Ctrl, 6=Shift (left); *=Shift, /=Ctrl, `=Alt, %=Super (right)
-// (< = ( normally, < when shifted; )> = ) normally, > when shifted
 bindings = <
             &kp DE_ACUTE             &kp DE_N7               &kp DE_N8                      &kp DE_N9                &kp DE_SECTION        &kp DE_LEFT_BRACKET                    &kp DE_RIGHT_BRACKET                   &kp DE_LESS_THAN               &kp DE_GREATER_THAN             &kp DE_PIPE
             &hml LEFT_GUI DE_N0      &hml LEFT_ALT DE_N4     &hml LEFT_CONTROL DE_N5        &hml LEFT_SHIFT DE_N6    &kp DE_NOT            &kp DE_DOUBLE_QUOTES                   &hmr RIGHT_SHIFT DE_APOSTROPHE         &hmr RIGHT_CONTROL DE_CARET    &hmr RIGHT_ALT DE_GRAVE         &hmr RIGHT_GUI DE_TILDE 
@@ -145,7 +144,6 @@ display-name = "SmartNum";
 // |  .  |  1  |  2  |  3  |  °  |   |  {  |  }  |  £  |  ¢  |  ¦  |
 //             | Exit | Space | Magic Shift |   | Exit | Bspc | Del |
 // Exit = return to layer 0 (default layer)
-// (< = ( normally, < when shifted; )> = ) normally, > when shifted
 bindings = <
             &kp DE_ACUTE             &kp DE_N7               &kp DE_N8                      &kp DE_N9                &kp DE_SECTION        &kp DE_LEFT_BRACKET                    &kp DE_RIGHT_BRACKET                   &kp DE_LESS_THAN               &kp DE_GREATER_THAN             &kp DE_PIPE
             &hml LEFT_GUI DE_N0      &hml LEFT_ALT DE_N4     &hml LEFT_CONTROL DE_N5        &hml LEFT_SHIFT DE_N6    &kp DE_NOT            &kp DE_DOUBLE_QUOTES                   &hmr RIGHT_SHIFT DE_APOSTROPHE         &hmr RIGHT_CONTROL DE_CARET    &hmr RIGHT_ALT DE_GRAVE         &hmr RIGHT_GUI DE_TILDE 
