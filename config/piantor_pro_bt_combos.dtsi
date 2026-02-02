@@ -20,8 +20,22 @@ combos {
         timeout-ms = <50>;
         require-prior-idle-ms = <100>;
         key-positions = <2 3>;  // F+P → Backspace
-        bindings = <&kp BSPC>;
+        bindings = <&backspace_delete_morph>;
         layers = <0 1 2 3 4>;
+    };
+    combo_escape {
+        timeout-ms = <50>;
+        require-prior-idle-ms = <100>;
+        key-positions = <6 7>;  // L+U → Escape (default layer only)
+        bindings = <&kp ESC>;
+        layers = <0>;
+    };
+    combo_exit {
+        timeout-ms = <50>;
+        require-prior-idle-ms = <100>;
+        key-positions = <6 7>;  // L+U → Exit to default layer (all other layers)
+        bindings = <&to 0>;
+        layers = <1 2 3 4>;
     };
 
     // ===== VERTICAL COMBOS (50ms timeout, 100ms require-prior-idle) =====

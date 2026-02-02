@@ -210,6 +210,12 @@ slash_morph: slash_exclamation {
     bindings = <&kp QMARK>, <&kp EXCL>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
 };
+backspace_delete_morph: backspace_or_delete {
+    compatible = "zmk,behavior-mod-morph";
+    #binding-cells = <0>;
+    bindings = <&kp BSPC>, <&kp DEL>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+};
 lpar_morph: lpar_lt {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
