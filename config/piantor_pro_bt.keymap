@@ -177,10 +177,10 @@ display-name = "NavSys";
 // Navigation & System layer (Space hold)
 // Left: Media/System/BT/RGB controls, Right: Navigation + BT/System
 // -------------------------------------------------------------------------
-// | BTClrAll** | Next | VolUp | BriUp | RGBBriUp |   | PgUp | Home | Up   | End  | BTClr**  |
-// | Reset**/Gui| Prev | VolDn | BriDn | RGBBriDn |   | PgDn | Left | Down | Rght | Reset**  |
-// | Boot**     | Play | Mute  | MicM  | RGBTog   |   | Sleep| PrSc | USB  | BLE  | Boot**   |
-//                         | BTPrv | BT0  | BTNxt |   | Blk  | Blk  | Exit |
+// | BTClrAll** | Next | VolUp | RGBof | stdunlok |   | PgUp | Home | Up   | End  | BTClr**  |
+// | Reset**/Gui| Prev | VolDn | BriDn |          |   | PgDn | Left | Down | Rght | Reset**  |
+// | Boot**     | Play | Mute  | MicM  |          |   |      | PrSc |      |      | Boot**   |
+//                         | BTPrv | BT0  | BTNxt |   |      |      | Exit |
 // Home row: tap=action, hold=modifier (Reset/Alt, Prev/Shift, VolDn/Ctrl, BriDn/Super)
 // ** = requires double-tap to trigger (single tap does nothing)
 bindings = <
