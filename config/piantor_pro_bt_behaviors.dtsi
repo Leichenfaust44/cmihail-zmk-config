@@ -70,10 +70,10 @@ tilde_slash_handler: tilde_to_slash {
 magic_key: magic_key {
     compatible = "zmk,behavior-adaptive-key";
     #binding-cells = <0>;
-    bindings = <&key_repeat>;
+    bindings = <&tilde_slash_handler>;
     repeat {
-        trigger-keys = <TILDE>;
-        bindings = <&kp FSLH>;
+        trigger-keys = <K_COPY>;
+        bindings = <&kp K_CUT>;
         max-prior-idle-ms = <5000>;
         strict-modifiers;
     };
@@ -166,13 +166,13 @@ smartnum_tap: smartnum_toggle_hold {
 numsym_fn_morph: numsym_or_fn {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
-    bindings = <&sl 1>, <&fn_layer_noshift>;
+    bindings = <&sl 2>, <&fn_layer_noshift>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
 };
 numsym_fn_hold_morph: numsym_or_fn_hold {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
-    bindings = <&mo 1>, <&mo 3>;
+    bindings = <&mo 2>, <&mo 1>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
 };
 numsym_tap: numsym_sticky_hold {
@@ -298,5 +298,5 @@ right_click_exit: right_click_and_exit {
 fn_layer_noshift: fn_layer_release_shift {
     compatible = "zmk,behavior-macro";
     #binding-cells = <0>;
-    bindings = <&sl 3>, <&macro_release &kp LSHIFT &kp RSHIFT>;
+    bindings = <&sl 1>, <&macro_release &kp LSHIFT &kp RSHIFT>;
 };
