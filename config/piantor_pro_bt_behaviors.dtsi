@@ -74,28 +74,27 @@ magic_shift: magic_shift {
 // magic key setup
 
 magic_key: magic_key {
-            compatible = "zmk,behavior-adaptive-key";
-            #binding-cells = <0>;
+    compatible = "zmk,behavior-adaptive-key";
+    #binding-cells = <0>;
 
-            // Fallback when no condition matches: do nothing
-            bindings = <&none>;
+    // Fallback when no condition matches: do nothing
+    bindings = <&none>;
 
-            // Case 1: Last key was P → output H
-            repeat@0 {
-                trigger-keys = <P>;
-                bindings = <&kp H>;
-                max-prior-idle-ms = <5000>;
-                strict-modifiers;
-            };
+    // Case 1: Last key was P → output H
+    repeat@0 {
+        trigger-keys = <P>;
+        bindings = <&kp H>;
+        max-prior-idle-ms = <5000>;
+        strict-modifiers;
+    };
 
-            // Case 2: Last key was E → output R
-            repeat@1 {
-                trigger-keys = <E>;
-                bindings = <&kp R>;
-                max-prior-idle-ms = <5000>;
-                strict-modifiers;
-            };
-        };
+    // Case 2: Last key was E → output R
+    repeat@1 {
+        trigger-keys = <E>;
+        bindings = <&kp R>;
+        max-prior-idle-ms = <5000>;
+        strict-modifiers;
+    };
 };
 
 // Tap-dance behaviors for dangerous actions (require double-tap)
