@@ -72,15 +72,10 @@ magic_shift: magic_shift {
 };
 
 magic_key: magic_key {
-    compatible = "zmk,behavior-adaptive-key";
+    compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
-    bindings = <&kp>;
-    repeat {
-        trigger-keys = <B L D C V J Y O U COMMA N R T S G P H A E I X Q M W Z K F SQT SEMI DOT>;
-        bindings = <&key_repeat>;
-        max-prior-idle-ms = <5000>;
-        strict-modifiers;
-    };
+    bindings = <&kp BSPC>, <&kp DEL>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
 };
 
 // Tap-dance behaviors for dangerous actions (require double-tap)
