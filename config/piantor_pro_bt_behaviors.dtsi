@@ -84,13 +84,6 @@ magic_key: magic_key {
         max-prior-idle-ms = <5000>;
         strict-modifiers;
     };
-
-     repeat@1 {
-        trigger-keys = <C>;
-        bindings = <&kp H>;
-        max-prior-idle-ms = <5000>;
-        strict-modifiers;
-    };
 };
 
 // Tap-dance behaviors for dangerous actions (require double-tap)
