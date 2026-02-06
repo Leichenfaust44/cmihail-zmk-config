@@ -87,6 +87,41 @@ magic_key: magic_key {
     };
 };
 
+
+
+// Macro that types B then R
+//        macro_br: macro_br {
+//            compatible = "zmk,behavior-macro";
+//            label = "BR";
+//            #binding-cells = <0>;
+//            bindings = <&kp B>, <&kp R>;
+//        };
+
+//        magic_key: magic_key {
+//            compatible = "zmk,behavior-adaptive-key";
+//            #binding-cells = <0>;
+            // Fallback action if no condition matches: repeat last key
+//            bindings = <&key_repeat>;
+
+            // Case 1: Last key was P → output H
+//            repeat@0 {
+//                trigger-keys = <P>;
+//                bindings = <&kp H>;
+//                max-prior-idle-ms = <5000>;
+//                strict-modifiers;
+//            };
+
+            // Case 2: Last key was E → output BR (macro)
+//            repeat@1 {
+//                trigger-keys = <E>;
+//                bindings = <&macro_br>;
+//                max-prior-idle-ms = <5000>;
+//                strict-modifiers;
+//           };
+//        };
+
+
+
 // Tap-dance behaviors for dangerous actions (require double-tap)
 td_bt_clr_all: tap_dance_bt_clear_all {
     compatible = "zmk,behavior-tap-dance";
