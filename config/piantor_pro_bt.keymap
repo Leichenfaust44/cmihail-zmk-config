@@ -72,7 +72,6 @@
 
 &sl {
     release-after-ms = <3000>;
-    ignore-modifiers;
 };
 
 &sk {
@@ -181,7 +180,7 @@
                 &kp AMPS        &kp N9          &kp N8          &kp N7          &kp BSLH        &kp EQUAL  &kp PLUS   &kp MINUS  &kp UNDER  &kp PIPE
                 &hml LALT N0    &hml LSFT N6    &hml LCTRL N5   &hml LGUI N4    &lpar_lt_morph  &rpar_gt_morph  &hmr RGUI ASTRK  &hmr RCTRL FSLH   &hmr RSFT GRAVE  &hmr RALT PRCNT
                 &kp CARET       &kp N3          &kp N2          &kp N1          &kp LBKT        &kp RBKT  &kp TILDE  &kp COMMA  &kp PERIOD &kp DLLR
-                                                &trans  &trans  &trans    &none  &trans  &trans
+                                                &trans  &trans  &trans    &smartnum_to_numsym  &trans  &trans
             >;
         };
 

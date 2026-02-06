@@ -354,6 +354,11 @@ shift_exit_caps: shift_and_exit_caps {
     #binding-cells = <0>;
     bindings = <&to 0>, <&sk LSHIFT>;
 };
+smartnum_to_numsym: smartnum_switch_to_numsym {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <&to 0>, <&numsym_fn_morph>;
+};
 space_adaptive: space_or_space_caps {
     compatible = "zmk,behavior-adaptive-key";
     #binding-cells = <0>;
