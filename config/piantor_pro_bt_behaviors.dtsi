@@ -80,8 +80,8 @@ magic_key: magic_key {
 
     // Case 1: Last key was C → output H
     repeat {
-        trigger-keys = <S>;
-        bindings = <&kp C> <&kp H>;
+        trigger-keys = <C>;
+        bindings = <&kp H>;
         max-prior-idle-ms = <5000>;
         strict-modifiers;
     };
