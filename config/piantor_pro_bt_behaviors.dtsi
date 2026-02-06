@@ -75,7 +75,7 @@ magic_shift: magic_shift {
 magic_key: magic_key {
     compatible = "zmk,behavior-adaptive-key";
     #binding-cells = <0>;
-    bindings = <&none>;
+    bindings = <&key_repeat>;
 
     // A → output U
     repeat_a {
