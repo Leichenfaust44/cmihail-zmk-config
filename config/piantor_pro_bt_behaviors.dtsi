@@ -78,16 +78,18 @@ magic_key: magic_key {
     #binding-cells = <0>;
     bindings = <&none>;
 
-    repeat {
-        trigger-keys = <P>;
+    // Case 1: Last key was C → output H
+    repeat@0 {
+        trigger-keys = <C>;
         bindings = <&kp H>;
         max-prior-idle-ms = <5000>;
         strict-modifiers;
     };
 
-    repeat {
-        trigger-keys = <C>;
-        bindings = <&kp H>;
+    // Case 2: Last key was E → output R
+    repeat@1 {
+        trigger-keys = <E>;
+        bindings = <&kp R>;
         max-prior-idle-ms = <5000>;
         strict-modifiers;
     };
