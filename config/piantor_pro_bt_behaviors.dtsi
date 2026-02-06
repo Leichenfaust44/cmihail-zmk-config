@@ -78,8 +78,8 @@ magic_key: magic_key {
     #binding-cells = <0>;
     bindings = <&key_repeat>;
     repeat {
-        trigger-keys = <TILDE>;
-        bindings = <&kp FSLH>;
+        trigger-keys = <P>;
+        bindings = <&kp H>;
         max-prior-idle-ms = <5000>;
         strict-modifiers;
     };
