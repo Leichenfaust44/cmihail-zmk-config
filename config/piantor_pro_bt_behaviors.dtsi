@@ -76,6 +76,7 @@ magic_shift: magic_shift {
 magic_key: magic_key {
     compatible = "zmk,behavior-adaptive-key";
     #binding-cells = <0>;
+    bindings = <&shift_repeat>;
     repeat {
         trigger-keys = <TILDE>;
         bindings = <&kp FSLH>;
