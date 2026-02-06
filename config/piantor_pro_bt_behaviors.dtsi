@@ -71,6 +71,18 @@ magic_shift: magic_shift {
     bindings = <&kp>, <&magic_shift_tap>;
 };
 
+magic_key: magic_key {
+    compatible = "zmk,behavior-adaptive-key";
+    #binding-cells = <0>;
+    bindings = <&kp>;
+    repeat {
+        trigger-keys = <B L D C V J Y O U COMMA N R T S G P H A E I X Q M W Z K F SQT SEMI DOT>;
+        bindings = <&key_repeat>;
+        max-prior-idle-ms = <5000>;
+        strict-modifiers;
+    };
+};
+
 // Tap-dance behaviors for dangerous actions (require double-tap)
 td_bt_clr_all: tap_dance_bt_clear_all {
     compatible = "zmk,behavior-tap-dance";
