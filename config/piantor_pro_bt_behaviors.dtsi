@@ -71,11 +71,12 @@ magic_shift: magic_shift {
     bindings = <&kp>, <&magic_shift_tap>;
 };
 
+// magic key: tap after letter = repeat
+
 magic_key: magic_key {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
-    bindings = <&kp BSPC>, <&kp DEL>;
-    mods = <(MOD_LSFT|MOD_RSFT)>;
+    bindings = <&key_repeat>;
 };
 
 // Tap-dance behaviors for dangerous actions (require double-tap)
