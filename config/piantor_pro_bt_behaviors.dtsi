@@ -77,7 +77,7 @@ magic_key: magic_key {
     #binding-cells = <0>;
     bindings = <&none>;
 
-    // Case 1: Last key was C → output H
+    // C → output H
     repeat_c {
         trigger-keys = <C>;
         bindings = <&kp H>;
@@ -85,15 +85,47 @@ magic_key: magic_key {
         strict-modifiers;
     };
 
-    // Case 2: Last key was D → output E
-    repeat_d {
-        trigger-keys = <D>;
-        bindings = <&kp E>;
+    // E → output U
+    repeat_e {
+        trigger-keys = <E>;
+        bindings = <&kp U>;
         max-prior-idle-ms = <5000>;
         strict-modifiers;
     };
 
-    // Case 3: Last key was S → output CH
+    // L → output K
+    repeat_l {
+        trigger-keys = <L>;
+        bindings = <&kp K>;
+        max-prior-idle-ms = <5000>;
+        strict-modifiers;
+    };
+
+    // O → output A
+    repeat_o {
+        trigger-keys = <O>;
+        bindings = <&kp A>;
+        max-prior-idle-ms = <5000>;
+        strict-modifiers;
+    };
+
+    // P → output Y
+    repeat_p {
+        trigger-keys = <P>;
+        bindings = <&kp Y>;
+        max-prior-idle-ms = <5000>;
+        strict-modifiers;
+    };
+
+    // R → output L
+    repeat_r {
+        trigger-keys = <R>;
+        bindings = <&kp L>;
+        max-prior-idle-ms = <5000>;
+        strict-modifiers;
+    };
+
+    // S → output CH
     repeat_s {
         trigger-keys = <S>;
         bindings = <&kp C>, <&kp H>;
