@@ -79,9 +79,17 @@ magic_key: magic_key {
     bindings = <&none>;
 
     // Case 1: Last key was C → output H
-    repeat {
+    repeat_c {
         trigger-keys = <C>;
         bindings = <&kp H>;
+        max-prior-idle-ms = <5000>;
+        strict-modifiers;
+    };
+
+    // Case 1: Last key was C → output H
+    repeat_d {
+        trigger-keys = <D>;
+        bindings = <&kp E>;
         max-prior-idle-ms = <5000>;
         strict-modifiers;
     };
