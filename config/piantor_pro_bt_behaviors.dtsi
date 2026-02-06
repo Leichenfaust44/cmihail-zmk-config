@@ -77,6 +77,14 @@ magic_key: magic_key {
     #binding-cells = <0>;
     bindings = <&none>;
 
+    // A → output U
+    repeat_a {
+        trigger-keys = <A>;
+        bindings = <&kp U>;
+        max-prior-idle-ms = <5000>;
+        strict-modifiers;
+    };
+
     // C → output H
     repeat_c {
         trigger-keys = <C>;
@@ -93,10 +101,26 @@ magic_key: magic_key {
         strict-modifiers;
     };
 
+    // H → output Y
+    repeat_h {
+        trigger-keys = <H>;
+        bindings = <&kp Y>;
+        max-prior-idle-ms = <5000>;
+        strict-modifiers;
+    };
+
     // L → output K
     repeat_l {
         trigger-keys = <L>;
         bindings = <&kp K>;
+        max-prior-idle-ms = <5000>;
+        strict-modifiers;
+    };
+
+    // N → output D
+    repeat_n {
+        trigger-keys = <N>;
+        bindings = <&kp D>;
         max-prior-idle-ms = <5000>;
         strict-modifiers;
     };
@@ -125,10 +149,10 @@ magic_key: magic_key {
         strict-modifiers;
     };
 
-    // S → output CH
+    // S → output C
     repeat_s {
         trigger-keys = <S>;
-        bindings = <&kp C>, <&kp H>;
+        bindings = <&kp C>;
         max-prior-idle-ms = <5000>;
         strict-modifiers;
     };
