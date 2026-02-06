@@ -74,10 +74,15 @@ magic_shift: magic_shift {
 // magic key: tap after letter = repeat
 
 magic_key: magic_key {
-    compatible = "zmk,behavior-mod-morph";
+    compatible = "zmk,behavior-adaptive-key";
     #binding-cells = <0>;
-    tapping-term-ms = <200>;
-    bindings = <&key_repeat>;
+    bindings = <&shift_repeat>;
+    repeat {
+        trigger-keys = <TILDE>;
+        bindings = <&kp FSLH>;
+        max-prior-idle-ms = <5000>;
+        strict-modifiers;
+    };
 };
 
 // Tap-dance behaviors for dangerous actions (require double-tap)
