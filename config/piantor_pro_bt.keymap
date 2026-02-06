@@ -109,10 +109,10 @@ display-name = "Gallium";
 //             | Escape | Space/Nav | Shift |   | NumSym | Backspace | Delete |
 // Home row mods: N=Super, R=Alt, T=Ctrl, S=Shift (left); H=Shift, A=Ctrl, E=Alt, I=Super (right)
 bindings = <
-&kp DE_B                &mt DE_A_UMLAUT DE_L        &mt DE_O_UMLAUT DE_D      &mt DE_U_UMLAUT DE_C      &kp DE_V          &kp DE_J          &kp DE_Y               &mt DE_QUESTION DE_O                 &mt DE_EXCLAMATION DE_U             &magic_key      
+&kp DE_B                &mt DE_A_UMLAUT DE_L        &mt DE_O_UMLAUT DE_D      &mt DE_U_UMLAUT DE_C      &kp DE_V          &kp DE_J          &kp DE_Y               &kp DE_O                 &kp DE_U             &mt DE_EXCLAMATION DE_QUESTION     
 &hml LEFT_GUI DE_N      &hml LEFT_ALT DE_R          &hml LEFT_CONTROL DE_T    &hml LEFT_SHIFT DE_S      &kp DE_G          &kp DE_P          &hmr RIGHT_SHIFT DE_H  &hmr RIGHT_CONTROL DE_A  &hmr RIGHT_ALT DE_E  &hmr RIGHT_GUI DE_I      
 &kp DE_X                &kp DE_Q                    &kp DE_M                  &kp DE_W                  &kp DE_Z          &kp DE_K          &kp DE_F               &kp DE_COMMA             &kp DE_DOT           &kp DE_MINUS    
-&kp ESCAPE                  &space_nav 4 DE_SPACE     &magic_shift LSHIFT 0     &numsym_tap 0 0   &kp BACKSPACE     &kp DEL          
+&kp ESCAPE                  &space_nav 4 DE_SPACE     &magic_key     &numsym_tap 0 0   &kp BACKSPACE     &kp DEL          
 >;
 };
 
@@ -130,7 +130,7 @@ bindings = <
 &kp DE_ACUTE             &kp DE_N7               &kp DE_N8                      &kp DE_N9                &kp DE_SECTION        &kp DE_LEFT_BRACKET                    &kp DE_RIGHT_BRACKET                   &kp DE_LESS_THAN               &kp DE_GREATER_THAN             &kp DE_PIPE
 &hml LEFT_GUI DE_N0      &hml LEFT_ALT DE_N4     &hml LEFT_CONTROL DE_N5        &hml LEFT_SHIFT DE_N6    &kp DE_NOT            &kp DE_DOUBLE_QUOTES                   &hmr RIGHT_SHIFT DE_APOSTROPHE         &hmr RIGHT_CONTROL DE_CARET    &hmr RIGHT_ALT DE_GRAVE         &hmr RIGHT_GUI DE_TILDE 
 &kp DE_PERIOD            &kp DE_N1               &kp DE_N2                      &kp DE_N3                &kp DE_DEGREE         &kp DE_LEFT_BRACE                      &kp DE_RIGHT_BRACE                     &kp DE_POUND_SIGN              &kp DE_CENT                     &kp DE_BROKEN_BAR
-&trans                         &trans                   &magic_shift LSHIFT 0                &smartnum_tap 2 2                      &trans                                 &to 0
+&trans                         &trans                   &trans                &smartnum_tap 2 2                      &trans                                 &to 0
 >;
 };
 
@@ -150,7 +150,7 @@ bindings = <
 &kp DE_ACUTE             &kp DE_N7               &kp DE_N8                      &kp DE_N9                &kp DE_SECTION        &kp DE_LEFT_BRACKET                    &kp DE_RIGHT_BRACKET                   &kp DE_LESS_THAN               &kp DE_GREATER_THAN             &kp DE_PIPE
 &hml LEFT_GUI DE_N0      &hml LEFT_ALT DE_N4     &hml LEFT_CONTROL DE_N5        &hml LEFT_SHIFT DE_N6    &kp DE_NOT            &kp DE_DOUBLE_QUOTES                   &hmr RIGHT_SHIFT DE_APOSTROPHE         &hmr RIGHT_CONTROL DE_CARET    &hmr RIGHT_ALT DE_GRAVE         &hmr RIGHT_GUI DE_TILDE 
 &kp DE_PERIOD            &kp DE_N1               &kp DE_N2                      &kp DE_N3                &kp DE_DEGREE         &kp DE_LEFT_BRACE                      &kp DE_RIGHT_BRACE                     &kp DE_POUND_SIGN              &kp DE_CENT                     &kp DE_BROKEN_BAR
-&to 0                          &kp DE_SPACE             &magic_shift LSHIFT 0   &to 0                                  &kp BACKSPACE                   &kp DEL
+&to 0                          &kp DE_SPACE             &trans   &to 0                                  &kp BACKSPACE                   &kp DEL
 >;
 };
 
@@ -167,7 +167,7 @@ bindings = <
 &kp F10     &kp F7      &kp F8      &kp F9          &none                   &none              &none               &none                    &none            &none
 &kp F11     &kp F4      &kp F5      &kp F6          &none                   &none              &kp RIGHT_SHIFT     &kp RIGHT_CONTROL        &kp RIGHT_ALT    &kp RIGHT_GUI
 &kp F12     &kp F1      &kp F2      &kp F3          &none                   &none              &none               &none                    &none            &none
-&to 0       &kp DE_SPACE    &magic_shift LSHIFT 0   &numsym_tap 0 0    &kp BACKSPACE       &kp DEL
+&to 0       &kp DE_SPACE    &trans   &numsym_tap 0 0    &kp BACKSPACE       &kp DEL
 >;
 };
 
