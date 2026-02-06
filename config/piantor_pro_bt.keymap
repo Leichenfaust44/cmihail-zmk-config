@@ -109,7 +109,7 @@ display-name = "Gallium";
 //             | Escape | Space/Nav | Shift |   | NumSym | Backspace | Delete |
 // Home row mods: N=Super, R=Alt, T=Ctrl, S=Shift (left); H=Shift, A=Ctrl, E=Alt, I=Super (right)
 bindings = <
-&kp DE_B                &mt DE_A_UMLAUT DE_L        &mt DE_O_UMLAUT DE_D      &mt DE_U_UMLAUT DE_C      &kp DE_V          &kp DE_J          &kp DE_Y               &mt DE_QUESTION DE_O                 &mt DE_EXCLAMATION DE_U             &mt DE_EXCLAMATION DE_QUESTION      
+&kp DE_B                &mt DE_A_UMLAUT DE_L        &mt DE_O_UMLAUT DE_D      &mt DE_U_UMLAUT DE_C      &kp DE_V          &kp DE_J          &kp DE_Y               &mt DE_QUESTION DE_O                 &mt DE_EXCLAMATION DE_U             &magic_key      
 &hml LEFT_GUI DE_N      &hml LEFT_ALT DE_R          &hml LEFT_CONTROL DE_T    &hml LEFT_SHIFT DE_S      &kp DE_G          &kp DE_P          &hmr RIGHT_SHIFT DE_H  &hmr RIGHT_CONTROL DE_A  &hmr RIGHT_ALT DE_E  &hmr RIGHT_GUI DE_I      
 &kp DE_X                &kp DE_Q                    &kp DE_M                  &kp DE_W                  &kp DE_Z          &kp DE_K          &kp DE_F               &kp DE_COMMA             &kp DE_DOT           &kp DE_MINUS    
 &kp ESCAPE                  &space_nav 4 DE_SPACE     &magic_shift LSHIFT 0     &numsym_tap 0 0   &kp BACKSPACE     &kp DEL          
