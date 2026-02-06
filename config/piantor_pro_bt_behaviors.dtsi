@@ -93,7 +93,7 @@ magic_key: magic_key {
         strict-modifiers;
     };
 
-    // Case 3: Last key was C → output CH
+    // Case 3: Last key was S → output CH
     repeat_s {
         trigger-keys = <S>;
         bindings = <&kp C>, <&kp H>;
