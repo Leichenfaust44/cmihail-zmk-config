@@ -72,6 +72,7 @@
 
 &sl {
     release-after-ms = <3000>;
+    ignore-modifiers;
 };
 
 &sk {
