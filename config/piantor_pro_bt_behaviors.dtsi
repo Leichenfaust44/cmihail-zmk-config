@@ -133,10 +133,10 @@ magic_key: magic_key {
         strict-modifiers;
     };
 
-    // P → output Y
+    // P → output H
     repeat_p {
         trigger-keys = <P>;
-        bindings = <&kp Y>;
+        bindings = <&kp H>;
         max-prior-idle-ms = <5000>;
         strict-modifiers;
     };
