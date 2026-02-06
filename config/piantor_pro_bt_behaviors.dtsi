@@ -76,7 +76,8 @@ magic_shift: magic_shift {
 magic_key: magic_key {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
-    bindings = <&key_repeat>;
+    tapping-term-ms = <200>;
+    bindings = <&mo>, <&key_repeat>;
 };
 
 // Tap-dance behaviors for dangerous actions (require double-tap)
