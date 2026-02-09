@@ -57,9 +57,6 @@
 #include <behaviors/num_word.dtsi>
 #include "keys_de_swiss.h"
 
-// Include custom display widgets
-#include "piantor_pro_bt_display.dtsi"
-
 // urob's helper macros for ZMK behaviors
 #include "zmk-helpers/helper.h"
 
