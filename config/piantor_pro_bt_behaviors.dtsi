@@ -141,6 +141,14 @@ magic_key: magic_key {
         strict-modifiers;
     };
 
+    // Q → output U
+    repeat_q {
+        trigger-keys = <Q>;
+        bindings = <&kp U>;
+        max-prior-idle-ms = <5000>;
+        strict-modifiers;
+    };
+
     // R → output L
     repeat_r {
         trigger-keys = <R>;
