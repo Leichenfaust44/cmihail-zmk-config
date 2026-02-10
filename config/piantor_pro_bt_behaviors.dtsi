@@ -294,3 +294,11 @@ numsym_fn_morph: numsym_or_fn {
     bindings = <&sl 1>, <&fn_layer_noshift>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
 };
+
+// Custom shift behaviors for comma, period, slash
+
+fn_layer_noshift: fn_layer_release_shift {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <&sl 3>, <&macro_release &kp LSHIFT &kp RSHIFT>;
+};
