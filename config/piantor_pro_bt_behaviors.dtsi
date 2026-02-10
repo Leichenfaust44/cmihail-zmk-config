@@ -287,3 +287,10 @@ hm_func: homerow_mods_function {
     quick-tap-ms = <225>;
     bindings = <&kp>, <&kp>;
 };
+
+numsym_fn_morph: numsym_or_fn {
+    compatible = "zmk,behavior-mod-morph";
+    #binding-cells = <0>;
+    bindings = <&sl 1>, <&fn_layer_noshift>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+};
