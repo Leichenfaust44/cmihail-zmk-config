@@ -61,7 +61,7 @@
 #include "zmk-helpers/helper.h"
 
 &num_word {
-continue-list = <BSPC DEL DOT PLUS MINUS ASTRK FSLH EQUAL GRAVE UP DOWN LEFT RIGHT HOME END K_UNDO K_AGAIN>;
+continue-list = <BSPC DEL DOT PLUS MINUS ASTRK FSLH EQUAL>;
 };
 
 &sl {
