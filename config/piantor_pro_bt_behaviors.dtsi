@@ -306,16 +306,7 @@ triple_backtick: triple_backtick_macro {
     #binding-cells = <0>;
     bindings = <&macro_tap &kp GRAVE &kp GRAVE &kp GRAVE>;
 };
-middle_click_exit: middle_click_and_exit {
-    compatible = "zmk,behavior-macro";
-    #binding-cells = <0>;
-    bindings = <&mkp MB3>, <&to 0>;
-};
-right_click_exit: right_click_and_exit {
-    compatible = "zmk,behavior-macro";
-    #binding-cells = <0>;
-    bindings = <&mkp MB2>, <&to 0>;
-};
+
 fn_layer_noshift: fn_layer_release_shift {
     compatible = "zmk,behavior-macro";
     #binding-cells = <0>;
