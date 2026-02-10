@@ -300,12 +300,6 @@ equal_no_shift: equal_without_shift {
     #binding-cells = <0>;
     bindings = <&macro_release &kp LSHIFT &kp RSHIFT>, <&macro_tap &kp EQUAL>;
 };
-plus_equal: plus_or_equal {
-    compatible = "zmk,behavior-mod-morph";
-    #binding-cells = <0>;
-    bindings = <&kp PLUS>, <&equal_no_shift>;
-    mods = <(MOD_LSFT|MOD_RSFT)>;
-};
 
 triple_backtick: triple_backtick_macro {
     compatible = "zmk,behavior-macro";
