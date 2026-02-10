@@ -347,24 +347,7 @@ plus_equal: plus_or_equal {
     bindings = <&kp PLUS>, <&equal_no_shift>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
 };
-copy_cut: copy_or_cut {
-    compatible = "zmk,behavior-mod-morph";
-    #binding-cells = <0>;
-    bindings = <&kp K_COPY>, <&kp K_CUT>;
-    mods = <(MOD_LSFT|MOD_RSFT)>;
-};
-undo_redo: undo_or_redo {
-    compatible = "zmk,behavior-mod-morph";
-    #binding-cells = <0>;
-    bindings = <&kp K_UNDO>, <&kp K_AGAIN>;
-    mods = <(MOD_LSFT|MOD_RSFT)>;
-};
-left_right_click: left_or_right_click {
-    compatible = "zmk,behavior-mod-morph";
-    #binding-cells = <0>;
-    bindings = <&mkp MB1>, <&mkp MB2>;
-    mods = <(MOD_LSFT|MOD_RSFT)>;
-};
+
 triple_backtick: triple_backtick_macro {
     compatible = "zmk,behavior-macro";
     #binding-cells = <0>;
