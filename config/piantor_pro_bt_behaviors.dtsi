@@ -295,12 +295,6 @@ hm_func: homerow_mods_function {
 
 // Custom shift behaviors for comma, period, slash
 
-triple_backtick: triple_backtick_macro {
-    compatible = "zmk,behavior-macro";
-    #binding-cells = <0>;
-    bindings = <&macro_tap &kp GRAVE &kp GRAVE &kp GRAVE>;
-};
-
 fn_layer_noshift: fn_layer_release_shift {
     compatible = "zmk,behavior-macro";
     #binding-cells = <0>;
