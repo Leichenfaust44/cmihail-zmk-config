@@ -72,7 +72,7 @@ magic_shift: magic_shift {
 };
 
 // magic key setup
-magic_key: magic_key {
+magic_key_tap: magic_key_tap {
     compatible = "zmk,behavior-adaptive-key";
     #binding-cells = <0>;
     bindings = <&key_repeat>;
@@ -172,7 +172,16 @@ magic_key: magic_key {
         max-prior-idle-ms = <5000>;
         strict-modifiers;
     };
+};
 
+// magic key with hold-tap: tap = adaptive key behavior, hold = activate FUN layer (layer 3)
+magic_key: magic_key {
+    compatible = "zmk,behavior-hold-tap";
+    #binding-cells = <2>;
+    flavor = "tap-preferred";
+    tapping-term-ms = <200>;
+    quick-tap-ms = <175>;
+    bindings = <&mo>, <&magic_key_tap>;
 };
 
 // Tap-dance behaviors for dangerous actions (require double-tap)
