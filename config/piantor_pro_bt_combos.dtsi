@@ -7,14 +7,15 @@ combos {
         require-prior-idle-ms = <150>;
         key-positions = <12 13>;  // T+S → Return
         bindings = <&kp RET>;
-        layers = <0 1 2 3 4>;
+        layers = <0 1 2 3>;
+        
     };
     combo_return {
         timeout-ms = <50>;
         require-prior-idle-ms = <150>;
         key-positions = <11 12>;  // R+T → Tab
         bindings = <&kp TAB>;
-        layers = <0 1 2 3 4>;
+        layers = <0 1 2 3>;
     };
 
     combo_bspc {
@@ -22,7 +23,7 @@ combos {
         require-prior-idle-ms = <150>;
         key-positions = <6 7>;  // Y+O → Backspace
         bindings = <&kp BACKSPACE>;
-        layers = <0 1 2 3 4>;
+        layers = <0 1 2 3>;
     };
     combo_del {
         timeout-ms = <50>;
@@ -30,7 +31,7 @@ combos {
         key-positions = <7 8>;  // O+U → Delete
         bindings = <&kp DELETE>;
         bindings = <&kp DEL>;
-        layers = <0 1 2 3 4>;
+        layers = <0 1 2 3>;
     };
 
     // ===== VERTICAL COMBOS LEFT CHARACTERS (50ms timeout, 100ms require-prior-idle) =====
@@ -40,7 +41,7 @@ combos {
         require-prior-idle-ms = <100>;
         key-positions = <1 11>;  // L+R
         bindings = <&kp DE_AT_SIGN>;
-        layers = <0 1 2 3 4>;
+        layers = <0 1 2 3>;
     };
 
     combo_char_percent {
@@ -48,7 +49,7 @@ combos {
         require-prior-idle-ms = <100>;
         key-positions = <11 21>;  // R+Q
         bindings = <&kp DE_PERCENT>;
-        layers = <0 1 2 3 4>;
+        layers = <0 1 2 3>;
     };
 
     combo_char_hash {
@@ -56,7 +57,7 @@ combos {
         require-prior-idle-ms = <100>;
         key-positions = <2 12>;  // D+T
         bindings = <&kp DE_HASH>;
-        layers = <0 1 2 3 4>;
+        layers = <0 1 2 3>;
     };
 
     combo_char_bslh {
@@ -64,7 +65,7 @@ combos {
         require-prior-idle-ms = <100>;
         key-positions = <12 22>;  // T+M
         bindings = <&kp DE_BACKSLASH>;
-        layers = <0 1 2 3 4>;
+        layers = <0 1 2 3>;
     };
 
     combo_char_dollar {
@@ -72,7 +73,7 @@ combos {
         require-prior-idle-ms = <100>;
         key-positions = <3 13>;  // C+S
         bindings = <&kp DE_DOLLAR>;
-        layers = <0 1 2 3 4>;
+        layers = <0 1 2 3>;
     };
 
     combo_char_equal {
@@ -80,7 +81,7 @@ combos {
         require-prior-idle-ms = <100>;
         key-positions = <13 23>;  // S+W
         bindings = <&kp DE_EQUAL>;
-        layers = <0 1 2 3 4>;
+        layers = <0 1 2 3>;
     };
 
     // ===== VERTICAL COMBOS RIGHT CHARACTERS (50ms timeout, 100ms require-prior-idle) =====
@@ -90,7 +91,7 @@ combos {
         require-prior-idle-ms = <100>;
         key-positions = <6 16>;  // Z+H
         bindings = <&kp DE_PLUS>;
-        layers = <0 1 2 3 4>;
+        layers = <0 1 2 3>;
     };
 
     combo_char_minus {
@@ -98,7 +99,7 @@ combos {
         require-prior-idle-ms = <100>;
         key-positions = <16 26>;  // H+F
         bindings = <&kp DE_MINUS>;
-        layers = <0 1 2 3 4>;
+        layers = <0 1 2 3>;
     };
 
     combo_char_astrk {
@@ -106,7 +107,7 @@ combos {
         require-prior-idle-ms = <100>;
         key-positions = <7 17>;  // Q+A
         bindings = <&kp DE_ASTERISK>;
-        layers = <0 1 2 3 4>;
+        layers = <0 1 2 3>;
     };
 
     combo_char_slash {
@@ -114,7 +115,7 @@ combos {
         require-prior-idle-ms = <100>;
         key-positions = <17 27>;  // A+,
         bindings = <&kp DE_SLASH>;
-        layers = <0 1 2 3 4>;
+        layers = <0 1 2 3>;
     };
 
     combo_char_euro {
@@ -122,7 +123,7 @@ combos {
         require-prior-idle-ms = <100>;
         key-positions = <8 18>;  // U+E
         bindings = <&kp DE_EURO>;
-        layers = <0 1 2 3 4>;
+        layers = <0 1 2 3>;
     };
 
     combo_char_amps {
@@ -130,7 +131,7 @@ combos {
         require-prior-idle-ms = <100>;
         key-positions = <18 28>;  // E+.
         bindings = <&kp DE_AMPERSAND>;
-        layers = <0 1 2 3 4>;
+        layers = <0 1 2 3>;
     }; 
 
     // ===== HORIZONTAL COMBOS RIGHT CHARACTERS (50ms timeout, 100ms require-prior-idle) =====
@@ -142,7 +143,7 @@ combos {
         require-prior-idle-ms = <150>;
         key-positions = <26 27>;  // F+,
         bindings = <&kp DE_LEFT_PARENTHESIS>;
-        layers = <0 1 2 3 4>;
+        layers = <0 1 2 3>;
     };
 
     combo_char_rpar {
@@ -150,7 +151,7 @@ combos {
         require-prior-idle-ms = <150>;
         key-positions = <27 28>;  // ,+.
         bindings = <&kp DE_RIGHT_PARENTHESIS>;
-        layers = <0 1 2 3 4>;
+        layers = <0 1 2 3>;
     }; 
 
 };
