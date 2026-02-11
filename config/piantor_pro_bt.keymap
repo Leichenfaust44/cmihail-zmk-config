@@ -47,132 +47,129 @@
 *   - Activated by holding Space
 */
 
-#include <behaviors.dtsi>
-#include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/rgb.h>
-#include <dt-bindings/zmk/outputs.h>
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 20
-#include <dt-bindings/zmk/pointing.h>
+
 #include <behaviors/num_word.dtsi>
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/rgb.h>
 #include "keys_de_swiss.h"
 
 // urob's helper macros for ZMK behaviors
+
 #include "zmk-helpers/helper.h"
 
-&num_word {
-continue-list = <BSPC DEL DOT PLUS MINUS ASTRK FSLH EQUAL SPACE>;
-};
+&num_word { continue-list = <BSPC DEL DOT PLUS MINUS ASTRK FSLH EQUAL SPACE>; };
 
 &sl {
-release-after-ms = <5000>;
-ignore-modifiers;
+    release-after-ms = <5000>;
+    ignore-modifiers;
 };
 
 &sk {
-release-after-ms = <5000>;
-quick-release;
+    release-after-ms = <5000>;
+    quick-release;
 };
 
 &mt {
-tapping-term-ms = <280>;
-quick-tap-ms = <175>;
-require-prior-idle-ms = <150>;
-flavor = "balanced";
-hold-trigger-on-release;
+    tapping-term-ms = <280>;
+    quick-tap-ms = <175>;
+    require-prior-idle-ms = <150>;
+    flavor = "balanced";
+    hold-trigger-on-release;
 };
 
 / {
-chosen {
-zmk,physical-layout = &five_col_layout;
-};
+    chosen { zmk,physical-layout = &five_col_layout; };
 };
 
 / {
-behaviors {
-#include "piantor_pro_bt_behaviors.dtsi"
-};
+    behaviors {
+        #include "piantor_pro_bt_behaviors.dtsi"
+    };
 
-#include "piantor_pro_bt_combos.dtsi"
+    #include "piantor_pro_bt_combos.dtsi"
 
-keymap {
-compatible = "zmk,keymap";
+    keymap {
+        compatible = "zmk,keymap";
 
-default_layer {
-display-name = "Gallium";
-// Gallium v1 (customized: X↔Q, /→;) with home row mods
-// ----------------------------------------------------------------------
-// |  B  |  L  |  D  |  C  |  V  |   |  J  |  Y  |  O  |  U  |  ?  |
-// |  N  |  R  |  T  |  S  |  G  |   |  P  |  H  |  A  |  E  |  I  |
-// |  X  |  Q  |  M  |  W  |  Z  |   |  K  |  F  |  ,  |  .  |  -  |
-//  | Escape | Space/Nav | Shift |   | NumSym | Backspace | Delete |
-//             | Escape | Space/Nav | Shift |   | NumSym | Backspace | Delete |
-// Home row mods: N=Super, R=Alt, T=Ctrl, S=Shift (left); H=Shift, A=Ctrl, E=Alt, I=Super (right)
-bindings = <
-&kp DE_B                &mt DE_A_UMLAUT DE_L        &mt DE_O_UMLAUT DE_D      &mt DE_U_UMLAUT DE_C      &kp DE_V          &kp DE_J          &kp DE_Y               &kp DE_O                 &kp DE_U             &mt DE_EXCLAMATION DE_QUESTION     
-&hml LEFT_GUI DE_N      &hml LEFT_ALT DE_R          &hml LEFT_CONTROL DE_T    &hml LEFT_SHIFT DE_S      &kp DE_G          &kp DE_P          &hmr RIGHT_SHIFT DE_H  &hmr RIGHT_CONTROL DE_A  &hmr RIGHT_ALT DE_E  &hmr RIGHT_GUI DE_I      
-&kp DE_X                &kp DE_Q                    &kp DE_M                  &kp DE_W                  &kp DE_Z          &kp DE_K          &kp DE_F               &kp DE_COMMA             &kp DE_DOT           &mt DE_UNDERSCORE DE_MINUS    
-&kp ESCAPE                  &space_nav 3 DE_SPACE     &magic_key 3 0     &smartnum_tap 1 1   &kp BACKSPACE     &kp DEL          
->;
-};
+        default_layer {
+            display-name = "Gallium";
 
-smartnum_layer {
-display-name = "SmartNum";
-// Smart number layer (matching Kanata layout with urob's auto-layer)
-// urob's smartnum auto-exits on non-number keys
-// Numbers on LEFT side: 987/0654/321, right side: num_sym symbols
-// -------------------------------------------------------------------------
-// |  ´  |  7  |  8  |  9  |  §  |   |  [  |  ]  |  <  |  >  |  |  |
-// | 0+G | 4+A | 5+C | 6+S |  ¬  |   |  "  | '+S | ^+C | `+A | ~+G |
-// |  .  |  1  |  2  |  3  |  °  |   |  {  |  }  |  £  |  ¢  |  ¦  |
-//             | Exit | Space | Magic Shift |   | Exit | Bspc | Del |
-// Exit = return to layer 0 (default layer)
-// (< = ( normally, < when shifted; )> = ) normally, > when shifted
-bindings = <
-&kp DE_ACUTE             &kp DE_N7               &kp DE_N8                      &kp DE_N9                &kp DE_SECTION        &kp DE_LEFT_BRACKET                    &kp DE_RIGHT_BRACKET                   &kp DE_LESS_THAN               &kp DE_GREATER_THAN             &kp DE_PIPE
-&hml LEFT_GUI DE_N0      &hml LEFT_ALT DE_N4     &hml LEFT_CONTROL DE_N5        &hml LEFT_SHIFT DE_N6    &kp DE_NOT            &kp DE_DOUBLE_QUOTES                   &hmr RIGHT_SHIFT DE_APOSTROPHE         &hmr RIGHT_CONTROL DE_CARET    &hmr RIGHT_ALT DE_GRAVE         &hmr RIGHT_GUI DE_TILDE 
-&kp DE_PERIOD            &kp DE_N1               &kp DE_N2                      &kp DE_N3                &kp DE_DEGREE         &kp DE_LEFT_BRACE                      &kp DE_RIGHT_BRACE                     &kp DE_POUND_SIGN              &kp DE_CENT                     &kp DE_BROKEN_BAR
-&to 0                          &kp DE_SPACE             &trans   &to 0                                  &kp BACKSPACE                   &kp DEL
->;
-};
+            // Gallium v1 (customized: X↔Q, /→;) with home row mods
+            // ----------------------------------------------------------------------
+            // |  B  |  L  |  D  |  C  |  V  |   |  J  |  Y  |  O  |  U  |  ?  |
+            // |  N  |  R  |  T  |  S  |  G  |   |  P  |  H  |  A  |  E  |  I  |
+            // |  X  |  Q  |  M  |  W  |  Z  |   |  K  |  F  |  ,  |  .  |  -  |
+            //  | Escape | Space/Nav | Shift |   | NumSym | Backspace | Delete |
+            //             | Escape | Space/Nav | Shift |   | NumSym | Backspace | Delete |
+            // Home row mods: N=Super, R=Alt, T=Ctrl, S=Shift (left); H=Shift, A=Ctrl, E=Alt, I=Super (right)
 
-fn_layer {
-display-name = "Fun";
-// Function keys (matching Gallium layout on right side)
-// Left: F-keys in REVERSE order, Right: same as default layer with home row mods
-// -------------------------------------------------------------------------
-// | F10 | F7  | F8  | F9  |     |   |     |     |     |     |     |
-// | F11 | F4  | F5  | F6  |     |   |     | RSft| RCtl| RAlt| RGui|
-// | F12 | F1  | F2  | F3  |     |   |     |     |     |     |     |
-//             | Exit | Space | Shift |   | NumSym | Bspc | Del |
-bindings = <
-&kp F10     &kp F7      &kp F8      &kp F9          &none                   &none              &none               &none                    &none            &none
-&kp F11     &kp F4      &kp F5      &kp F6          &none                   &none              &kp RIGHT_SHIFT     &kp RIGHT_CONTROL        &kp RIGHT_ALT    &kp RIGHT_GUI
-&kp F12     &kp F1      &kp F2      &kp F3          &none                   &none              &none               &none                    &none            &none
-&to 0       &kp DE_SPACE    &trans   &trans    &kp BACKSPACE       &kp DEL
->;
-};
+            bindings = <
+  &kp DE_B  &mt DE_A_UMLAUT DE_L  &mt DE_O_UMLAUT DE_D  &mt DE_U_UMLAUT DE_C  &kp DE_V  &kp DE_J  &kp DE_Y  &kp DE_O  &kp DE_U  &mt DE_EXCLAMATION DE_QUESTION      &hml LEFT_GUI DE_N  &hml LEFT_ALT DE_R  &hml LEFT_CONTROL DE_T  &hml LEFT_SHIFT DE_S  &kp DE_G  &kp DE_P  &hmr RIGHT_SHIFT DE_H  &hmr RIGHT_CONTROL DE_A  &hmr RIGHT_ALT DE_E  &hmr RIGHT_GUI DE_I      &kp DE_X  &kp DE_Q  &kp DE_M  &kp DE_W  &kp DE_Z  &kp DE_K  &kp DE_F  &kp DE_COMMA  &kp DE_DOT  &mt DE_UNDERSCORE DE_MINUS    &kp ESCAPE  &space_nav 3 DE_SPACE  &magic_key 3 0  &smartnum_tap 1 1  &kp BACKSPACE  &kp DEL
+            >;
+        };
 
+        Lapwing {
+            bindings = <
+  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+            >;
 
-nav_sys_layer {
-display-name = "NavSys";
-// Navigation & System layer (Space hold)
-// Left: Media/System/BT/RGB controls, Right: Navigation + BT/System
-// -------------------------------------------------------------------------
-// | BTClrAll** | Next | VolUp | RGBof | stdunlok |   | PgUp | Home | Up   | End  | BTClr**  |
-// | Reset**/Gui| Prev | VolDn | BriDn |          |   | PgDn | Left | Down | Rght | Reset**  |
-// | Boot**     | Play | Mute  | MicM  |          |   |      | PrSc |      |      | Boot**   |
-//                         | BTPrv | BT0  | BTNxt |   |      |      | Exit |
-// Home row: tap=action, hold=modifier (Reset/Alt, Prev/Shift, VolDn/Ctrl, BriDn/Super)
-// ** = requires double-tap to trigger (single tap does nothing)
-bindings = <
-&td_bt_clr_all     &kp C_NEXT                   &kp C_VOL_UP                   &rgb_ug RGB_OFF                    &studio_unlock    &kp PG_UP     &kp HOME      &kp UP          &kp END        &td_bt_clr
-&kp LEFT_GUI   &hml LEFT_ALT C_PREV      &hml LEFT_CONTROL C_VOL_DN    &kp LEFT_SHIFT      &none             &kp PG_DN     &kp LEFT      &kp DOWN        &kp RIGHT      &td_reset
-&td_boot           &kp C_PP                  &kp C_MUTE                    &kp LG(RA(K))       &none             &kp CAPSLOCK         &kp PSCRN     &none           &none          &td_boot
-&bt BT_PRV  &bt BT_SEL 0  &bt BT_NXT    &none  &none  &to 0
->;
-};
+            label = "Lapwing";
+        };
 
+        smartnum_layer {
+            display-name = "SmartNum";
 
-};
+            // Smart number layer (matching Kanata layout with urob's auto-layer)
+            // urob's smartnum auto-exits on non-number keys
+            // Numbers on LEFT side: 987/0654/321, right side: num_sym symbols
+            // -------------------------------------------------------------------------
+            // |  ´  |  7  |  8  |  9  |  §  |   |  [  |  ]  |  <  |  >  |  |  |
+            // | 0+G | 4+A | 5+C | 6+S |  ¬  |   |  "  | '+S | ^+C | `+A | ~+G |
+            // |  .  |  1  |  2  |  3  |  °  |   |  {  |  }  |  £  |  ¢  |  ¦  |
+            //             | Exit | Space | Magic Shift |   | Exit | Bspc | Del |
+            // Exit = return to layer 0 (default layer)
+            // (< = ( normally, < when shifted; )> = ) normally, > when shifted
+
+            bindings = <
+  &kp DE_ACUTE  &kp DE_N7  &kp DE_N8  &kp DE_N9  &kp DE_SECTION  &kp DE_LEFT_BRACKET  &kp DE_RIGHT_BRACKET  &kp DE_LESS_THAN  &kp DE_GREATER_THAN  &kp DE_PIPE      &hml LEFT_GUI DE_N0  &hml LEFT_ALT DE_N4  &hml LEFT_CONTROL DE_N5  &hml LEFT_SHIFT DE_N6  &kp DE_NOT  &kp DE_DOUBLE_QUOTES  &hmr RIGHT_SHIFT DE_APOSTROPHE  &hmr RIGHT_CONTROL DE_CARET  &hmr RIGHT_ALT DE_GRAVE  &hmr RIGHT_GUI DE_TILDE      &kp DE_PERIOD  &kp DE_N1  &kp DE_N2  &kp DE_N3  &kp DE_DEGREE  &kp DE_LEFT_BRACE  &kp DE_RIGHT_BRACE  &kp DE_POUND_SIGN  &kp DE_CENT  &kp DE_BROKEN_BAR    &to 0  &kp DE_SPACE  &trans  &to 0  &kp BACKSPACE  &kp DEL
+            >;
+        };
+
+        fn_layer {
+            display-name = "Fun";
+
+            // Function keys (matching Gallium layout on right side)
+            // Left: F-keys in REVERSE order, Right: same as default layer with home row mods
+            // -------------------------------------------------------------------------
+            // | F10 | F7  | F8  | F9  |     |   |     |     |     |     |     |
+            // | F11 | F4  | F5  | F6  |     |   |     | RSft| RCtl| RAlt| RGui|
+            // | F12 | F1  | F2  | F3  |     |   |     |     |     |     |     |
+            //             | Exit | Space | Shift |   | NumSym | Bspc | Del |
+
+            bindings = <
+  &kp F10  &kp F7  &kp F8  &kp F9  &none  &none  &none  &none  &none  &none      &kp F11  &kp F4  &kp F5  &kp F6  &none  &none  &kp RIGHT_SHIFT  &kp RIGHT_CONTROL  &kp RIGHT_ALT  &kp RIGHT_GUI      &kp F12  &kp F1  &kp F2  &kp F3  &none  &none  &none  &none  &none  &none    &to 0  &kp DE_SPACE  &trans  &trans  &kp BACKSPACE  &kp DEL
+            >;
+        };
+
+        nav_sys_layer {
+            display-name = "NavSys";
+
+            // Navigation & System layer (Space hold)
+            // Left: Media/System/BT/RGB controls, Right: Navigation + BT/System
+            // -------------------------------------------------------------------------
+            // | BTClrAll** | Next | VolUp | RGBof | stdunlok |   | PgUp | Home | Up   | End  | BTClr**  |
+            // | Reset**/Gui| Prev | VolDn | BriDn |          |   | PgDn | Left | Down | Rght | Reset**  |
+            // | Boot**     | Play | Mute  | MicM  |          |   |      | PrSc |      |      | Boot**   |
+            //                         | BTPrv | BT0  | BTNxt |   |      |      | Exit |
+            // Home row: tap=action, hold=modifier (Reset/Alt, Prev/Shift, VolDn/Ctrl, BriDn/Super)
+            // ** = requires double-tap to trigger (single tap does nothing)
+
+            bindings = <
+  &td_bt_clr_all  &kp C_NEXT  &kp C_VOL_UP  &rgb_ug RGB_OFF  &studio_unlock  &kp PG_UP  &kp HOME  &kp UP  &kp END  &td_bt_clr      &kp LEFT_GUI  &hml LEFT_ALT C_PREV  &hml LEFT_CONTROL C_VOL_DN  &kp LEFT_SHIFT  &none  &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &td_reset      &td_boot  &kp C_PP  &kp C_MUTE  &kp LG(RA(K))  &none  &kp CAPSLOCK  &kp PSCRN  &none  &none  &td_boot    &bt BT_PRV  &bt BT_SEL 0  &bt BT_NXT  &none  &none  &to 0
+            >;
+        };
+    };
 };
