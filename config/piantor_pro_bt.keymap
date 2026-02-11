@@ -185,9 +185,9 @@ display-name = "Lapwing";
 
 bindings = <
 &none  &none  &kp RET  &none  &none  &none  &none  &kp BACKSPACE  &none  &none    
-&kp DE_HASH  &kp  DE_T  &kp DE_P  &kp DE_H  &kp DE_ASTERISK  &kp DE_F  &kp DE_P  &kp DE_L  &kp DE_T  &kp DE_D
-&kp DE_S  &kp DE_K  &kp DE_W  &kp DE_R  &kp DE_ASTERISK  &kp DE_R  &kp DE_B  &kp DE_G  &kp DE_S  &kp DE_Z
-&kp DE_A  &kp DE_O  &none  &none  &kp DE_E  &kp DE_U
+&kp HASH  &kp  T  &kp P  &kp H  &kp ASTERISK  &kp F  &kp P  &kp L  &kp T  &kp D
+&kp S  &kp K  &kp W  &kp R  &kp ASTERISK  &kp R  &kp B  &kp G  &kp S  &kp Z
+&kp A  &kp O  &none  &none  &kp E  &kp U
 >;
 };
 
