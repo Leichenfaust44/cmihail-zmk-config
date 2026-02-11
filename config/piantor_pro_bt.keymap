@@ -173,6 +173,25 @@ bindings = <
 >;
 };
 
+lapwing_layer {
+display-name = "Lapwing";
+// Navigation & System layer (Space hold)
+// Left: Media/System/BT/RGB controls, Right: Navigation + BT/System
+// -------------------------------------------------------------------------
+// | BTClrAll** | Next | VolUp | RGBof | stdunlok |   | PgUp | Home | Up   | End  | BTClr**  |
+// | Reset**/Gui| Prev | VolDn | BriDn |          |   | PgDn | Left | Down | Rght | Reset**  |
+// | Boot**     | Play | Mute  | MicM  |          |   |      | PrSc |      |      | Boot**   |
+//                         | BTPrv | BT0  | BTNxt |   |      |      | Exit |
+// Home row: tap=action, hold=modifier (Reset/Alt, Prev/Shift, VolDn/Ctrl, BriDn/Super)
+// ** = requires double-tap to trigger (single tap does nothing)
+bindings = <
+&td_bt_clr_all     &kp C_NEXT                   &kp C_VOL_UP                   &rgb_ug RGB_OFF                    &studio_unlock    &kp PG_UP     &kp HOME      &kp UP          &kp END        &td_bt_clr
+&kp LEFT_GUI   &hml LEFT_ALT C_PREV      &hml LEFT_CONTROL C_VOL_DN    &kp LEFT_SHIFT      &none             &kp PG_DN     &kp LEFT      &kp DOWN        &kp RIGHT      &td_reset
+&td_boot           &kp C_PP                  &kp C_MUTE                    &kp LG(RA(K))       &none             &kp CAPSLOCK         &kp PSCRN     &none           &none          &td_boot
+&bt BT_PRV  &bt BT_SEL 0  &bt BT_NXT    &none  &none  &to 0
+>;
+};
+
 
 };
 };
