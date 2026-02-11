@@ -20,7 +20,7 @@ combos {
 
     combo_lapwing {
         timeout-ms = <2000>;
-        key-positions = <20 29>;
+        key-positions = <0 9>; // B+? → to Layer 4 (Test Layout)
         bindings = <&tog 4>;
         slow-release;
     };
