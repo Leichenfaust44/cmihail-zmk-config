@@ -18,13 +18,6 @@ combos {
         layers = <0 1 2 3>;
     };
 
-    combo_lapwing {
-        timeout-ms = <2000>;
-        key-positions = <0 9>; // B+? → to Layer 4 (Test Layout)
-        bindings = <&tog 4>;
-        slow-release;
-    };
-
     // ===== VERTICAL COMBOS LEFT CHARACTERS (50ms timeout, 100ms require-prior-idle) =====
 
     combo_char_at {
