@@ -173,24 +173,6 @@ bindings = <
 >;
 };
 
-lapwing_layer {
-display-name = "Lapwing";
-// Test-Layer
-// No Combos
-// -------------------------------------------------------------------------
-// |     |     |     |     |     |   |     |     |     |     |     |
-// |  #  |  T  |  P  |  H  |  *  |   |  F  |  P  |  L  |  T  |  D  |
-// |  S  |  K  |  W  |  R  |  *  |   |  R  |  B  |  G  |  S  |  Z  |
-//             |  A  |  O  |     |   |     |  E  |  U  |
-
-bindings = <
-&none  &none  &kp RET  &none  &none  &none  &none  &kp BACKSPACE  &none  &none    
-&kp HASH  &kp  T  &kp P  &kp H  &kp ASTERISK  &kp F  &kp P  &kp L  &kp T  &kp D
-&kp S  &kp K  &kp W  &kp R  &kp ASTERISK  &kp R  &kp B  &kp G  &kp S  &kp Z
-&kp A  &kp O  &none  &none  &kp E  &kp U
->;
-};
-
 
 };
 };
